@@ -1,0 +1,160 @@
+﻿@model test2.Models.StaffModel.AppointmentDetailViewModel
+
+@{
+    Layout = "Layout_staff";
+    ViewData["Title"] = "Appointment Detail from Staff";
+}
+
+<div class="container-fluid">
+    <div class="layout-specing">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="bg-white rounded shadow overflow-hidden">
+                    <div class="p-4 border-bottom">
+                        <h5 class="mb-0">Patient Information</h5>
+                    </div>
+                    <div class="text-center avatar-profile margin-nagative mt-n5 position-relative pb-4 border-bottom">
+                        <img src="Model.PatientImage" class="rounded-circle shadow-md avatar avatar-md-md" alt="">
+                        <h5 class="mt-3 mb-1">@Model.PatientName</h5>
+                    </div>
+
+                    <div class="list-unstyled p-4">
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-user align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Gender</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.PatientGender</p>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-book-open align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Phone Number</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.PatientPhone</p>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-medical-drip align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Date of Birth</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.PatientDOB?.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+                <div class="bg-white rounded shadow overflow-hidden">
+                    <div class="p-4 border-bottom">
+                        <h5 class="mb-0">Doctor Information</h5>
+                    </div>
+                    <div class="text-center avatar-profile margin-nagative mt-n5 position-relative pb-4 border-bottom">
+                        <img src="@Model.DoctorImage" class="rounded-circle shadow-md avatar avatar-md-md" alt="">
+                        <h5 class="mt-3 mb-1">@Model.DoctorName</h5>
+                    </div>
+
+                    <div class="list-unstyled p-4">
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-user align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Gender</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.DoctorGender</p>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-book-open align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Phone Number</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.DoctorPhone</p>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-2">
+                            <i class="uil uil-book-open align-text-bottom text-primary h5 mb-0 me-2"></i>
+                            <h6 class="mb-0">Specialization</h6>
+                            <p class="text-muted mb-0 ms-2">@Model.DoctorSpecialization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-0 shadow overflow-hidden mt-4">
+            <div class="p-4 border-bottom">
+                <h5 class="mb-0">Appointment Information</h5>
+            </div>
+            <div class="tab-content p-4" id="pills-tabContent">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Appointment Date</label>
+                            <p>@Model.AppointmentDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Time</label>
+                            <p>@Model.AppointmentTime</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <p>@Model.Status</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Supporting Staff</label>
+                            <p>@Model.SupportingStaff</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Consultation Fee</label>
+                            <p>@Model.Fee.ToString("N0") $</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <label class="form-label">Information</label>
+                            <p>@Model.ConsultationInfo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Cập Nhật Trạng Thái Cuộc Hẹn -->
+        <div class="card border-0 shadow overflow-hidden mt-4">
+            <div class="p-4 border-bottom">
+                <h5 class="mb-0">Update Information</h5>
+            </div>
+            <div class="tab-content p-4" id="pills-tabContent">
+                <!-- Form Update Status -->
+                <form asp-controller="Staff" asp-action="UpdateAppointmentStatus" method="post">
+                    <input type="hidden" name="appointmentId" value="@Model.AppointmentId" />
+                    <div class="tab-content p-4">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Status</label>
+                                <select asp-for="Status" asp-items="Model.StatusList" class="form-control" id="newStatus" name="newStatus"></select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Status</button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- Hiển thị thông báo từ TempData -->
+                @if (TempData["Message"] != null)
+
+                {
+                    <div class="alert alert-success mt-3">
+                        @TempData["Message"]
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+
+                {
+                    <div class="alert alert-danger mt-3">
+                        @TempData["Error"]
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

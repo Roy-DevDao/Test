@@ -1,0 +1,165 @@
+﻿@model IEnumerable<test2.Models.StaffModel.ContactViewModel>
+
+@{
+    Layout = "Layout_staff";
+    ViewData["Title"] = "Contact List from Staff";
+}
+
+
+<div class="container-fluid">
+    <div class="layout-specing">
+        <div class="row">
+            <div class="col-md-5 row">
+                <div class="col-md-4">
+                    <h5 class="mb-0">Contact Requirement</h5>
+                </div>
+            </div>
+        <div class="col-md-7">
+    <form action="@Url.Action("ContactList", "Staff")" method="GET" onSubmit="document.getElementById('submit').disabled = true;">
+        <div class="justify-content-md-end row">
+            <div class="col-md-5 row align-items-center">
+                <div class="col-md-4">
+                    <label class="form-label">Status</label>
+                </div>
+                <div class="col-md-8">
+                    <select name="status" class="form-select" aria-label="Default select example">
+                        <option value="">------------</option>
+                        <option value="all" >All</option>
+                        <option value="Completed" >Completed</option>
+                        <option value="Pending" >Pending</option>
+                        <option value="Canceled">Canceled</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-1 md-0">
+                <button type="submit" id="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="table-responsive bg-white shadow rounded">
+                        <table class="table mb-0 table-center">
+                            <thead>
+                                <tr>
+                                    <th class="border-bottom p-3">ID</th>
+                                    <th class="border-bottom p-3">Full Name</th>
+                                    <th class="border-bottom p-3">Email</th>
+                                    <th class="border-bottom p-3">Medical Description</th>
+                                    <th class="border-bottom p-3">Status</th>
+                                    <th class="border-bottom p-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var contact in Model)
+
+                                {
+                                    <tr>
+                                        <th class="p-3">@contact.ContactId</th>
+                                        <td class="p-3">@contact.FullName</td>
+                                        <td class="p-3">@contact.Email</td>
+                                        <td class="p-3">@contact.Description</td>
+                                        <td class="p-3">@contact.Status</td>
+                                        @if(contact.Status == "resolved" || contact.Status == "Resolved")
+                                        {
+                                            <td class="text-end p-3">
+                                            </td>
+                                        } else {
+                                        <td class="text-end p-3">
+                                            <a asp-controller="Staff" asp-action="ResolveContact" asp-route-id="@contact.ContactId" type="button" class="btn btn-info">Resolve</a>
+                                        </td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row text-center">
+                <div class="col-12 mt-4">
+                    <div class="d-md-flex align-items-center text-center justify-content-between">
+                        <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+                            @if (ViewBag.PageNumber > 1)
+
+
+
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-action="ContactList"
+                                       asp-route-gender="@ViewBag.Gender"
+                                       asp-route-speciality="@ViewBag.Speciality"
+                                       asp-route-sort="@ViewBag.Sort"
+                                       asp-route-pageNumber="@(ViewBag.PageNumber - 1)"
+                                       aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+
+
+
+                            {
+
+
+
+                                if (i <= 4 || i == ViewBag.TotalPages || (i == ViewBag.PageNumber - 1) || (i == ViewBag.PageNumber + 1))
+
+
+
+                                {
+                                    <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                                        <a class="page-link" asp-action="ContactList"
+                                           asp-route-gender="@ViewBag.Gender"
+                                           asp-route-speciality="@ViewBag.Speciality"
+                                           asp-route-sort="@ViewBag.Sort"
+                                           asp-route-pageNumber="@i">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
+
+
+
+                                else if (i == 5 && ViewBag.PageNumber > 5)
+
+
+
+                                {
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                                }
+
+
+
+                            }
+
+                            @if (ViewBag.PageNumber < ViewBag.TotalPages)
+
+
+
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-action="DoctorList"
+                                       asp-route-gender="@ViewBag.Gender"
+                                       asp-route-speciality="@ViewBag.Speciality"
+                                       asp-route-sort="@ViewBag.Sort"
+                                       asp-route-pageNumber="@(ViewBag.PageNumber + 1)"
+                                       aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

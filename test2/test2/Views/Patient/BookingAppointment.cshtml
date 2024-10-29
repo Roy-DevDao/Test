@@ -1,0 +1,484 @@
+@model test2.Models.PatientModel.DoctorScheduleViewModel
+@{
+    Layout = "Layout_Patient";
+
+    ViewBag.Title = "Booking Appointment";
+    var patientName = ViewBag.User.Username;
+    var patientEmail = ViewBag.User.Email;
+
+    var dayNames = new[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+    var today = Model.Today;
+    DateTime realtime = DateTime.Now.AddHours(5);
+
+
+    // Sample data for appointments
+
+    var data = new List<List<string>> {
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00"},
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+    };
+    var timedisplay = new List<List<string>> {
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00"},
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+        new List<string> { "08:00:00", "09:00:00", "10:00:00", "14:00:00", "15:00:00", "16:00:00" },
+    };
+
+    var status = new List<List<int>>
+    {
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0},
+        new List<int> {0,0,0,0,0,0}
+    };
+    for (int i = 0; i < data.Count; i++)
+    {
+        for (int j = 0; j < data[i].Count; j++)
+        {
+
+            var time = TimeOnly.Parse(data[i][j]);  // Parse time from data
+            var currentDate = today.AddDays(i);     // Calculate the corresponding date
+            var endTime = time.AddHours(1);
+            string formattedTime = $"{time:HH:mm} - {endTime:HH:mm}";
+            timedisplay[i][j] = formattedTime;
+            if (currentDate.Add(time.ToTimeSpan()) < realtime)
+            {
+
+                status[i][j] = -1;
+                continue;
+            }
+            // Check if there is any Option that matches the current date and time
+            var optionMatch = Model.Schedule
+                .Any(o => o.DateWork.HasValue
+                          && o.DateWork.Value.Date == currentDate
+                          && o.DateWork.Value.TimeOfDay == time.ToTimeSpan()
+                          && o.Status != "Available"
+                          && o.Status != "Canceled"
+            );
+
+
+            // If there's a match, mark the status position as 1
+            if (optionMatch)
+            {
+
+                status[i][j] = 1;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    var currentDay = (int)DateTime.Now.DayOfWeek;
+
+    var days = dayNames.Skip(currentDay).Concat(dayNames.Take(currentDay)).ToList();
+
+    var activeTab = days[0];
+
+    var count = 0;
+
+    var description = "";
+}
+
+
+
+
+<div class="pt-4">
+    <div class="border-b border-gray-200 dark:border-gray-700">
+
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center justify-center text-gray-500 dark:text-gray-400">
+            @for (int i = 0; i < days.Count; i++)
+            {
+                if (i == 0)
+                {
+                    <li id='@today.AddDays(i).ToString("yyyy-MM-dd")' class="dayofweek me-2 text-blue-600 border-b-2 rounded-t-lg border-blue-600 hover:text-blue-600 hover:border-blue-600">
+                        <a class=" inline-flex items-center justify-center p-4 "
+                           onclick="setActiveTab('@today.AddDays(i).ToString("yyyy-MM-dd")')">
+                            @days[i]
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li id='@today.AddDays(i).ToString("yyyy-MM-dd")' class="dayofweek me-2 text-gray-500 rounded-t-lg border-b-2 border-gray-500 hover:text-blue-600 hover:border-blue-600">
+                        <a class=" inline-flex items-center justify-center p-4   "
+                           onclick="setActiveTab('@today.AddDays(i).ToString("yyyy-MM-dd")')">
+                            @days[i]
+                        </a>
+                    </li>
+                }
+
+            }
+        </ul>
+
+
+        <div class="container mx-auto p-4 flex flex-col items-center">
+            <div class="flex w-4/5 items-center justify-center">
+                <div class="overflow-x-auto mt-5">
+                    <img src="@Model.Doctor.DoctorImg" width="200px" class="rounded-lg shadow-md" alt="Doctor Poster" />
+
+                </div>
+                <div class="ml-4 overflow-y-auto mt-5 w-96">
+                    <h3 class="font-bold mb-2">
+                        @Model.Doctor.Name
+                    </h3>
+                    <p>
+                        @Model.Doctor.Description
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-row mt-4">
+
+                <div class="basis-1/2">
+                    <li class="font-medium list-none">
+                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+
+                            <span class="ms-3">Time Booking</span>
+                        </a>
+                    </li>
+
+
+                    @for (int i = 0; i < data.Count; i++)
+                    {
+                        <div id='@today.AddDays(i).ToString("yyyy-MM-dd")_dok' class="displaydok @(i == 0 ? "" : "hidden") mt-2 grid grid-cols-3 gap-1 content-center">
+
+                            @if (status[i].All(value => value == -1))
+                            {
+                                <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-2 py-2.5 text-center me-2 mb-2">Please choose next day</button>
+
+                            }
+
+                            @for (int j = 0; j < data[i].Count; j++)
+                            {
+
+
+                                if (status[i][j] == 1)
+                                {
+                                    <button disabled type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Booked</button>
+
+                                }
+                                else if (status[i][j] == 0)
+                                {
+                                    <button type="button" onclick="setSlot('@today.AddDays(i).ToString("yyyy-MM-dd")','@data[i][j]', this)" class="slotbooking text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">@timedisplay[i][j]</button>
+
+                                }
+
+
+                            }
+
+
+                        </div>
+
+                    }
+
+                </div>
+                <div class="basis-1/2 border-l-4 border-gray pl-2">
+                    <li class="font-medium list-none">
+                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+
+                            <span class="ms-3">Address hospital</span>
+                        </a>
+                    </li>
+                    <p>2nd Floor, Mandarin Garden 2 Shopping Center, 99 Tan Mai Street, Tan Mai, Hoang Mai, Hanoi</p>
+
+                    <div class="mt-6 w-full max-w-md flex items-center">
+                        <label htmlFor="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Billing</label>
+                        <button type="button" class=" mx-4 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">@Model.Doctor.Price VND</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input field for description -->
+            <div class="mt-6 w-full max-w-md">
+                <label htmlFor="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Appointment Description</label>
+                <textarea type="text"
+                          id="description"
+                          class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+
+
+            <!-- Confirm button -->
+            <button type="button"
+                    class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300" onclick="checkContext()">
+                Confirm Appointment
+            </button>
+            <button id="submitbooking" data-modal-target="timeline-modal" data-modal-toggle="timeline-modal" type="button"
+                    class="hidden mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300" onclick="checkContext()">
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<input id="datebooking" class="hidden" name="datebooking" value="" />
+<input id="timebooking" class="hidden" name="timebooking" value="" />
+
+
+<div id="timeline-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <button id="timeline-modal-close" type="button" class="hidden absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="timeline-modal">
+    </button>
+    <div class="bg-white p-6 max-w-md mx-auto rounded-xl shadow-lg border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-800 mb-6">Booking Confirm</h2>
+
+        <div class="border-b border-gray-200 pb-4 mb-6 space-y-3">
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium">Doctor</span>
+                <span class="text-gray-800">@Model.Doctor.Name</span>
+            </div>
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium">Specialty</span>
+                <span class="text-gray-800 text-right">@Model.Doctor.Specialty.SpecialtyName</span>
+            </div>
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium pr-4">Ordering Date</span>
+                <span id="ordering-date" class="text-gray-800"></span>
+            </div>
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium pr-4">Booking Date</span>
+                <span id="booking-date" class="text-gray-800"></span>
+            </div>
+        </div>
+
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Patient Details</h2>
+        <div class="border-b border-gray-200 pb-4 mb-6 space-y-3">
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium">Patient</span>
+                <span class="text-gray-800">@patientName</span>
+            </div>
+            <div class="flex justify-between text-gray-600">
+                <span class="font-medium pr-4">Email</span>
+                <span class="text-gray-800">@patientEmail</span>
+            </div>
+            <div class="text-gray-600 flex flex-col">
+                <span class="font-medium">Description</span>
+
+                <span onclick="showMore()" id="desc-confirm" class="text-gray-800"></span>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between items-center text-lg pb-4 border-b border-gray-200 font-semibold text-gray-800">
+            <span>Total</span>
+            <span class="text-yellow-500 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+                </svg>
+
+                @Model.Doctor.Price VND
+            </span>
+        </div>
+        <div class="flex flex-row-reverse mt-2">
+            <button type="button" onclick="booking()" class="bg-gray-100 p-2 border-1 rounded text-black hover:bg-yellow-400 hover:text-white">confirm</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<form class="hidden" method="post">
+
+    <input type="text" id="desc" name="desc" />
+    <input type="text" id="doctorid" name="doctorid" value="@Model.Doctor.Did" />
+    <input type="text" id="tiem" name="tiem" />
+</form>
+
+
+<button id="error-modal-button" data-modal-target="error-modal" data-modal-toggle="error-modal" class="hidden block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+    Toggle modal
+</button>
+
+<div id="error-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="error-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-4 md:p-5 text-center">
+                <div id="fb-success" class="hidden">
+                    <svg class="mx-auto mb-4 text-green-400 w-12 h-12 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </div>
+
+                <div id="fb-fail" class="hidden">
+                    <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </div>
+                <h3 id="context-notify" class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function setActiveTab(dateid) {
+
+            const active = document.getElementById(dateid);
+            console.log("data ", active);
+            const slots = document.querySelectorAll('div.displaydok');
+            const elements = document.querySelectorAll('li.dayofweek');
+            const slot = document.getElementById(dateid + "_dok");
+
+
+
+            // Duyệt qua từng thẻ và thêm các class mới
+            elements.forEach(element => {
+                element.classList.remove('border-blue-600', 'text-blue-600');
+            });
+            elements.forEach(element => {
+                element.classList.add('border-gray-500', 'text-gray-500');
+            });
+            active.classList.remove('border-gray-500', 'text-gray-500');
+            active.classList.add('border-blue-600', 'text-blue-600');
+            slots.forEach(element => {
+                element.classList.add('hidden');
+            });
+            slot.classList.remove('hidden');
+        }
+
+        function setSlot(date, time, owner) {
+            var a = document.getElementById("datebooking").value;
+            var b = document.getElementById("timebooking").value;
+            if (a == date && b == time) {
+                owner.classList.remove('bg-blue-800', 'text-white');
+                document.getElementById("datebooking").value = '';
+                document.getElementById("timebooking").value = '';
+                return;
+            }
+            const elements = document.querySelectorAll('button.slotbooking');
+            elements.forEach(element => {
+                element.classList.remove('bg-blue-800', 'text-white');
+            });
+            owner.classList.add('bg-blue-800', 'text-white');
+            document.getElementById("datebooking").value = date;
+            document.getElementById("timebooking").value = time;
+        }
+
+        function checkContext() {
+
+
+            if (document.getElementById("timebooking").value == '') {
+                document.getElementById('context-notify').innerHTML = "you have to choose a slot";
+                document.getElementById('fb-success').classList.add('hidden');
+                document.getElementById('fb-fail').classList.remove('hidden');
+                document.getElementById('error-modal-button').click();
+            }
+            else if (document.getElementById('description').value.trim() == "") {
+                document.getElementById('context-notify').innerHTML = "Don't leave description blank";
+                document.getElementById('fb-success').classList.add('hidden');
+                document.getElementById('fb-fail').classList.remove('hidden');
+                document.getElementById('error-modal-button').click();
+            }
+            else {
+
+                const btn = document.getElementById('submitbooking');
+                btn.click();
+                const currentDate = new Date();
+                const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+                const formattedDate = currentDate.toLocaleDateString('en-US', options);
+                console.log(formattedDate);
+                document.getElementById('booking-date').innerHTML = document.getElementById("datebooking").value + " " + document.getElementById("timebooking").value;
+                document.getElementById('ordering-date').innerHTML = formattedDate;
+                const mota = document.getElementById('description').value;
+                if (mota.length > 25) {
+                    document.getElementById('desc-confirm').innerHTML = mota.slice(0, 25) + '...';
+                }
+                else {
+                    document.getElementById('desc-confirm').innerHTML = mota;
+                }
+            }
+        }
+
+        function booking() {
+            var desc = document.getElementById("description").value;
+            var time = document.getElementById("datebooking").value + " " + document.getElementById("timebooking").value;
+            var doctorid = document.getElementById("doctorid").value;
+
+
+            var formData = { desc: desc, doctorid: doctorid, time: time }
+
+            $.ajax({
+                url: '/Patient/ProcessBooking',  // URL of the action method in the server
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+                    if (data.success != null) {
+                        document.getElementById("context-notify").innerHTML = "Booking Successful";
+                        window.location.href = '/Patient/Invoice/' + data.orderId;
+                    }
+                    else {
+                        console.log("dcm deo hieu");
+                        document.getElementById('timeline-modal-close').click();
+                        document.getElementById("context-notify").innerHTML = data.err;
+                        document.getElementById('fb-success').classList.add('hidden');
+                        document.getElementById('fb-fail').classList.remove('hidden');
+                        document.getElementById("error-modal-button").click();
+                    }
+                    document.getElementById("display-notify").click();
+                    console.log(data);
+                },
+                error: function (error) {
+                    console.log('Error:', error); // Error handling
+                }
+            });
+        }
+        var more = true;
+        function showMore() {
+            console.log("ngu");
+            const mota = document.getElementById('description').value;
+
+            if (mota.length > 25) {
+                if (more == false) {
+                    document.getElementById('desc-confirm').innerHTML = mota.slice(0, 25) + '...';
+                    more = true;
+                }
+                else {
+                    document.getElementById('desc-confirm').innerHTML = mota;
+                    more = false;
+                }
+
+            }
+
+
+        }
+
+
+    </script>
+}

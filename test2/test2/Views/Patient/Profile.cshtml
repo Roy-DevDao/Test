@@ -1,0 +1,236 @@
+﻿@model test2.Models.PatientModel.PatientBaseViewModel
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/Layout_Patient.cshtml";
+}
+
+<style>
+    /* Reset các margin và padding */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif; /* Font chữ cho toàn bộ trang */
+        height: 100%; /* Chiều cao 100% cho body */
+    }
+
+    .main-content {
+        padding: 60px; /* Tăng khoảng cách cho phần chính */
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        height: calc(100vh - 60px); /* Đảm bảo form căn giữa trên màn hình */
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng màn hình */
+    }
+
+    .section-content {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px; /* Tăng khoảng cách bên trong container */
+        display: flex; /* Sử dụng flexbox cho bố cục */
+        justify-content: space-between; /* Tạo khoảng cách giữa các form */
+        width: 100%; /* Giới hạn chiều rộng container */
+        max-width: 1200px; /* Đặt chiều rộng tối đa cho container */
+        margin: auto; /* Căn giữa container trên trang */
+    }
+
+    h4 {
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+        font-size: 24px; /* Kích thước tiêu đề */
+        color: #343a40; /* Màu tiêu đề */
+    }
+
+    .icon-box {
+        display: flex; /* Flexbox cho icon và tiêu đề */
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
+
+    .icon {
+        margin-right: 15px; /* Khoảng cách giữa icon và tiêu đề */
+    }
+
+    .form-group {
+        margin-bottom: 30px; /* Khoảng cách giữa các nhóm form */
+    }
+
+    .form-control {
+        border-radius: 4px; /* Bo góc cho các input */
+        border: 1px solid #ced4da; /* Viền cho input */
+        transition: border-color 0.2s; /* Hiệu ứng chuyển màu cho viền */
+    }
+
+        .form-control:focus {
+            border-color: #007bff; /* Màu viền khi focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng khi focus */
+        }
+
+    .btn {
+        border-radius: 5px; /* Bo góc cho nút */
+        padding: 10px; /* Padding cho nút */
+    }
+
+    .btn-success {
+        background-color: #28a745; /* Màu nền cho nút cập nhật */
+    }
+
+        .btn-success:hover {
+            background-color: #218838; /* Màu nền khi hover */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Màu nền cho nút đổi mật khẩu */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+
+    .text-center {
+        text-align: center; /* Căn giữa chữ */
+    }
+
+</style>
+
+<!-- Start main-content -->
+<div class="main-content">
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <!-- Form Update Thông Tin -->
+                    <div class="col-md-6">
+                        <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+                            <input type="hidden" asp-for="PatientProfile.Patient.PId" />
+
+                            <div class="icon-box mb-0 p-0">
+                                <a href="#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
+                                    <i class="pe-7s-users"></i>
+                                </a>
+                                <h4 class="text-gray pt-10 mt-0 mb-30">Sửa trang cá nhân</h4>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_name">Tên</label>
+                                    <input asp-for="PatientProfile.Patient.Name" class="form-control" type="text" required />
+                                    <span asp-validation-for="PatientProfile.Patient.Name" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form_gender">Giới tính</label>
+                                    <select asp-for="PatientProfile.Patient.Gender" class="form-control" required>
+                                        <option value="">---- Lựa chọn ----</option>
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_choose_username">Tên đăng nhập</label>
+                                    <input asp-for="PatientProfile.Patient.Username" class="form-control" type="text" required disabled />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Điện thoại</label>
+                                    <input asp-for="PatientProfile.Patient.Phone" class="form-control" type="text" disabled />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_email">Email</label>
+                                    <input asp-for="PatientProfile.Patient.Email" class="form-control" type="email" disabled />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form_date_of_birth">Ngày sinh</label>
+                                    <input asp-for="PatientProfile.Patient.DobString" class="form-control" type="date" required />
+                                    <span asp-validation-for="PatientProfile.Patient.DobString" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <label for="form_avatar">Ảnh đại diện</label>
+                                <input asp-for="PatientProfile.Patient.AvataUpload" type="file" class="form-control" />
+                                <p class="help-block">Upload ảnh đại diện.</p>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-success btn-lg btn-block mt-15" type="submit">Cập nhật</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <!-- Form Đổi Mật Khẩu -->
+                    <div class="col-md-6">
+                        <form asp-action="ChangePassword" method="post">
+                            <input type="hidden" asp-for="PatientProfile.ChangePassword.PId" />
+
+                            <div class="icon-box mb-0 p-0">
+                                <h4 class="text-gray pt-10 mt-0 mb-30">Đổi mật khẩu</h4>
+                            </div>
+                            <hr>
+                            <p class="text-gray">Mật khẩu cần thay đổi thường xuyên vì lý do bảo mật.</p>
+
+                            <div class="form-group">
+                                <label>Mật khẩu cũ</label>
+                                <input asp-for="PatientProfile.ChangePassword.OldPassword" class="form-control" type="password">
+                                <span asp-validation-for="PatientProfile.ChangePassword.OldPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mật khẩu mới</label>
+                                <input asp-for="PatientProfile.ChangePassword.NewPassword" class="form-control" type="password" required>
+                                <span asp-validation-for="PatientProfile.ChangePassword.NewPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nhập lại mật khẩu mới</label>
+                                <input asp-for="PatientProfile.ChangePassword.ConfirmNewPassword" class="form-control" type="password" required>
+                                <span asp-validation-for="PatientProfile.ChangePassword.ConfirmNewPassword" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="form-group text-center">
+                                <button class="btn btn-success btn-lg mt-15" type="submit">Cập nhật</button>
+                            </div>
+                            
+                            <!--
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary btn-sm mt-15" type="submit">Cập nhật</button>
+                            </div>
+                            -->
+                        </form>
+
+                        <!-- Thông báo thành công hoặc thất bại -->
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
+                        }
+
+                        @if (TempData["SuccessMessage"] != null)
+                        {
+                            <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
+                        }
+
+                        <!-- Hiển thị các lỗi ModelState nếu có -->
+                        @if (ViewData.ModelState.ErrorCount > 0)
+                        {
+                            <div class="alert alert-danger mt-3">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- end main-content -->
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

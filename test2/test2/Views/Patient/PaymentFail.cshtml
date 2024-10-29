@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thất bại";
+    Layout = "Layout_new"; // Đảm bảo sử dụng layout của bạn
+}
+
+<div class="container">
+    <div class="alert alert-danger text-center">
+        <h1><i class="fas fa-times-circle fa-5x"></i></h1>
+        <h2>Thanh toán không thành công!</h2>
+        <p>@TempData["Message"]</p>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Quay lại trang chủ</a>
+    </div>
+</div>
+
+<style>
+    .alert {
+        margin-top: 100px;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .fa-times-circle {
+        color: red;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+</style>

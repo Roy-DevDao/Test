@@ -1,0 +1,217 @@
+﻿@using System.Globalization
+@model InvoiceViewModel
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Thêm Font Awesome -->
+    <title>Xem Hóa Đơn Khám Bệnh</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .invoice-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative; /* Để có thể đặt vị trí cho biểu tượng Home */
+        }
+
+        .invoice-header {
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+            .invoice-header h1 {
+                margin: 0;
+                color: #007bff;
+            }
+
+        .invoice-details, .appointment-details {
+            margin: 20px 0;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+            .invoice-table th,
+            .invoice-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .invoice-table th {
+                background-color: #007bff;
+                color: white;
+            }
+
+        .invoice-total {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .payment-method {
+            margin: 20px 0;
+        }
+
+            .payment-method h2 {
+                margin: 0;
+            }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+            .payment-option img {
+                width: 50px; /* Kích thước hình ảnh */
+                height: auto;
+                margin-right: 10px; /* Khoảng cách giữa hình và chữ */
+            }
+
+        .pay-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .pay-button:hover {
+                background-color: #218838;
+            }
+
+        .home-icon {
+            position: absolute; /* Đặt vị trí của biểu tượng */
+            top: 20px; /* Khoảng cách từ trên */
+            right: 20px; /* Khoảng cách từ bên phải */
+            font-size: 24px; /* Kích thước biểu tượng */
+            color: #007bff; /* Màu sắc biểu tượng */
+            cursor: pointer; /* Hiệu ứng con trỏ */
+        }
+
+        .selected {
+            border: 2px solid #007bff; /* Đường viền cho phương thức đã chọn */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <i class="fas fa-home home-icon" onclick="window.location.href='/Home/Index';"></i> <!-- Biểu tượng Home -->
+
+        <header class="invoice-header">
+            <h1>HÓA ĐƠN KHÁM BỆNH</h1>
+            <p>Mã Hóa Đơn: DOC-@Model.OrderId</p>
+            <p>Ngày: <span id="invoice-date">@DateTime.Now.ToString("dd/MM/yyyy")</span></p>
+        </header>
+
+        <div class="invoice-details">
+            <h2>Thông Tin Bệnh Nhân</h2>
+            <p><strong>Tên:</strong> @Model.PatientName</p>
+            <p><strong>Ngày Sinh:</strong> @Model.PatientDOB</p>
+            <p><strong>Điện Thoại:</strong> @Model.PatientPhone</p>
+            <p><strong>Email:</strong> @Model.PatientEmail</p>
+        </div>
+
+        <div class="appointment-details">
+            <h2>Thông Tin Đặt Lịch Khám</h2>
+            <p><strong>Bác Sĩ:</strong> Dr. @Model.DoctorName</p>
+            <p><strong>Chuyên Khoa:</strong> @Model.DoctorSpecialty</p>
+            <p><strong>Ngày Khám:</strong> @Model.AppointmentDate</p>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Dịch Vụ</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Khám @Model.DoctorSpecialty</td>
+                    <td>@String.Format(CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", Model.TotalAmount) VND</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="invoice-total">
+            <p><strong>Tổng Tiền: @String.Format(CultureInfo.GetCultureInfo("vi-VN"), "{0:C0}", Model.TotalAmount) VND</strong></p>
+        </div>
+
+        <div class="payment-method">
+            <h2>Chọn Phương Thức Thanh Toán</h2>
+            <div class="payment-option" onclick="selectPayment(this)" data-value="momo">
+                <img src="https://img.mservice.com.vn/app/img/portal_documents/mini-app_design-guideline_branding-guide-2-2.png" alt="MoMo Logo">
+                <span>MoMo</span>
+            </div>
+            <div class="payment-option" onclick="selectPayment(this)" data-value="vnpay">
+                <img src="https://downloadlogomienphi.com/sites/default/files/logos/download-logo-vector-vi-vnpay-mien-phi.jpg" alt="VnPay Logo">
+                <span>VnPay</span>
+            </div>
+        </div>
+
+        <div class="invoice-footer">
+            <button class="pay-button" id="payButton">Thanh Toán</button>
+        </div>
+    </div>
+
+<script>
+    let selectedPayment = null;
+
+    function selectPayment(element) {
+        // Xóa class 'selected' khỏi các phương thức đã chọn trước đó
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+        // Thêm class 'selected' vào phương thức thanh toán đã chọn
+        element.classList.add('selected');
+        selectedPayment = element.getAttribute('data-value');
+        console.log('Payment method selected:', selectedPayment); // In ra giá trị của selectedPayment
+    }
+
+    document.getElementById('payButton').addEventListener('click', function () {
+        console.log('Selected Payment:', selectedPayment); // In ra giá trị của phương thức thanh toán
+        const totalAmount = @Model.TotalAmount; // Sử dụng giá trị tổng tiền từ Model
+        const orderId = '@Model.OrderId'; // Sử dụng mã hóa đơn từ Model
+
+        if (selectedPayment) {
+            // Chuyển hướng dựa trên phương thức thanh toán đã chọn
+            if (selectedPayment === 'momo') {
+                const momoUrl = '@Url.Action("MomoPayment", "Patient")?orderId=' + orderId + '&total=' + totalAmount;
+                console.log('MoMo Payment URL:', momoUrl); // In ra URL thanh toán MoMo
+                window.location.href = momoUrl;
+            } else if (selectedPayment === 'vnpay') {
+                const vnPayUrl = '@Url.Action("VnPayment", "Patient")?orderId=' + orderId + '&total=' + totalAmount;
+                console.log('VnPay Payment URL:', vnPayUrl); // In ra URL thanh toán VnPay
+                window.location.href = vnPayUrl;
+            }
+        } else {
+            alert('Vui lòng chọn phương thức thanh toán.');
+        }
+    });
+</script>
+
+</body>
+</html>

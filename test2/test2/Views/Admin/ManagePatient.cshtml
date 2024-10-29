@@ -1,0 +1,302 @@
+﻿﻿﻿@{
+    Layout = "Layout_Admin";
+}
+
+
+@section Styles {
+    <style>
+
+
+        .doctor-dashboard {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .header1 .search-container {
+                display: flex;
+            }
+
+            .header1 input {
+                width: 200px;
+            }
+
+        .doctor-table img {
+            border-radius: 50%;
+        }
+
+        .btn-info {
+            background-color: #3D5EE9;
+            color: white;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            position: relative;
+            right: 8px;
+        }
+
+        /* aaaaa */
+        /* Centering icon and text on the same line */
+        .icon-text {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .icon-text i {
+                font-size: 16px;
+                margin-right: 5px;
+            }
+
+        /* Table styling */
+        .table th, .table td {
+            text-align: justify; /* Center the text and icons */
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .table img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+
+        .sort-options {
+            width: 40%;
+        }
+
+        button.btn {
+            margin-right: 5px; /* Khoảng cách giữa các nút */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            width: 30%;
+        }
+    </style>
+}
+
+@if (TempData["SuccessMessage"] != null)
+
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@model IEnumerable<test2.Data.Patient>
+
+<div class="doctor-dashboard">
+    <div class="header1 d-flex justify-content-between align-items-center mb-4">
+
+        <form method="get" action="@Url.Action("ManagePatient", "Admin")">
+            <div class="search-container d-flex">
+                <input name="searchQuery" type="text" placeholder="Tìm kiếm ở đây..." class="form-control me-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <a asp-controller="Admin" asp-action="AddPatient">
+            <button class="btn btn-primary">
+                <i class="fas fa-plus"></i> Thêm Bệnh Nhân
+            </button>
+        </a>
+    </div>
+
+    <form method="get" asp-action="ManagePatient">
+        <div class="sort-options d-flex mb-4">
+            <select class="form-select me-2" name="sortGender" id="sortGender">
+                <option value="">Tất cả giới tính</option>
+                <option value="Male">Nam</option>
+                <option value="Female">Nữ</option>
+            </select>
+            <select class="form-select me-2" name="sortID" id="sortID">
+                <option value="">Tất cả ID</option>
+                <option value="Increase">Tăng dần</option>
+                <option value="Decrease">Giảm dần</option>
+            </select>
+            <select class="form-select me-2" name="sortName" id="sortName">
+                <option value="">Tất cả tên</option>
+                <option value="Increase">A-Z</option>
+                <option value="Decrease">Z-A</option>
+            </select>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-filter"></i> <!-- Icon Lọc -->
+            </button>
+        </div>
+    </form>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <!-- Sắp xếp theo ID -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-hashtag"></i>
+                        ID
+                        <a asp-action="ManagePatient" asp-route-sortColumn="Pid" asp-route-sortDirection="@((ViewBag.SortColumn == "Pid" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                            <i class="@(ViewBag.SortColumn == "Pid" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                        </a>
+
+                    </div>
+                </th>
+
+                <!-- Sắp xếp theo Tên -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-user"></i>
+                        Tên
+                        <a asp-action="ManagePatient" asp-route-sortColumn="PName" asp-route-sortDirection="@((ViewBag.SortColumn == "PName" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                            <i class="@(ViewBag.SortColumn == "PName" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                        </a>
+                    </div>
+                </th>
+
+                <!-- Sắp xếp theo Giới Tính (không thay đổi) -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-venus-mars"></i>
+                        Giới Tính
+
+                    </div>
+                </th>
+
+                <!-- Sắp xếp theo Ngày Sinh -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-calendar"></i>
+                        Ngày Sinh
+                        <a asp-action="ManagePatient" asp-route-sortColumn="PDate" asp-route-sortDirection="@((ViewBag.SortColumn == "PDate" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                            <i class="@(ViewBag.SortColumn == "PDate" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                        </a>
+                    </div>
+                </th>
+
+                <!-- Số Điện Thoại (không sắp xếp) -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-phone"></i>
+                        Số Điện Thoại
+                    </div>
+                </th>
+
+                <!-- Tùy Chọn (không sắp xếp) -->
+                <th>
+                    <div class="icon-text">
+                        <i class="fas fa-cogs"></i>
+                        Tùy Chọn
+                    </div>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody id="patient-list">
+            @foreach (var patient in Model)
+            {
+                <tr>
+                    <td>@patient.Pid</td>
+                    <td>@patient.Name</td>
+                    <td>@patient.Gender</td>
+                    <td>@patient.Dob?.ToString("dd/MM/yyyy")</td>
+                    <td>@patient.Phone</td>
+                    <td>
+                        <a asp-controller="Admin" asp-action="PatientDetails" asp-route-id="@patient.Pid">
+                            <button class="btn btn-info">
+                                <i class="fas fa-eye"></i> <!-- Icon Mắt cho chi tiết -->
+                            </button>
+                        </a>
+                        <form asp-action="DeletePatient" asp-controller="Admin" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@patient.Pid" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa bệnh nhân này?');">
+                                <i class="fas fa-trash-alt"></i> <!-- Icon Thùng Rác cho xóa -->
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <!-- Tailwind CSS Pagination -->
+    <div class="tailwindTotal flex items-center justify-between border-t border-gray-200 bg-[#F8F9FA] px-4 py-3 sm:px-6">
+        <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+            <div>
+                <div class="text-sm text-gray-700">
+
+                    Hiển thị @ViewBag.StartResult đến @ViewBag.EndResult của @ViewBag.TotalPatients kết quả
+
+                </div>
+            </div>
+            <div>
+                <!-- Pagination links -->
+                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                    <!-- Previous Button -->
+                    <a asp-action="ManagePatient" asp-route-page="@(ViewBag.CurrentPage - 1)" asp-route-sortID="@ViewBag.CurrentSortID" asp-route-sortGender="@ViewBag.CurrentSortGender" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                        <span class="sr-only">Trước</span>
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+
+                    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+
+
+
+                    {
+                        <a asp-action="ManagePatient" asp-route-page="@i" asp-route-sortID="@ViewBag.CurrentSortID" asp-route-sortGender="@ViewBag.CurrentSortGender"
+                           class="relative inline-flex items-center px-3 py-1 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 @(ViewBag.CurrentPage == i ? "z-10 text-white" : "")"
+                           style="@(ViewBag.CurrentPage == i ? "background-color:#0D6EFD;" : "")">
+                            @i
+                        </a>
+                    }
+
+                    <!-- Next Button -->
+                    <a asp-action="ManagePatient" asp-route-page="@(ViewBag.CurrentPage + 1)" asp-route-sortID="@ViewBag.CurrentSortID" asp-route-sortGender="@ViewBag.CurrentSortGender" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                        <span class="sr-only">Sau</span>
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </nav>
+
+            </div>
+        </div>
+    </div>

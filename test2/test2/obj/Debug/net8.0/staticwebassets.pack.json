@@ -1,0 +1,2401 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\test2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\test2.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\PagedList.css",
+      "PackagePath": "staticwebassets\\Content\\PagedList.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\Site.css",
+      "PackagePath": "staticwebassets\\Content\\Site.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\Style.css",
+      "PackagePath": "staticwebassets\\Content\\Style.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\alertify.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\alertify.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\alertify.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\alertify.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\alertify.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\alertify.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\alertify.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\alertify.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\default.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\default.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\default.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\default.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\default.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\default.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\default.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\default.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\semantic.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\semantic.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\semantic.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\semantic.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\semantic.rtl.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\semantic.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\alertify\\themes\\semantic.rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\alertify\\themes\\semantic.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\Content\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\font-awesome.css",
+      "PackagePath": "staticwebassets\\Content\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Content\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\fonts\\museosansrounded-300.otf",
+      "PackagePath": "staticwebassets\\Content\\fonts\\museosansrounded-300.otf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\fonts\\museosansrounded-700.otf",
+      "PackagePath": "staticwebassets\\Content\\fonts\\museosansrounded-700.otf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\Content\\images\\favicon.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\featured-list.png",
+      "PackagePath": "staticwebassets\\Content\\images\\featured-list.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\healthcare.png",
+      "PackagePath": "staticwebassets\\Content\\images\\healthcare.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\heart.png",
+      "PackagePath": "staticwebassets\\Content\\images\\heart.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\heartmedical.png",
+      "PackagePath": "staticwebassets\\Content\\images\\heartmedical.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\hospital.png",
+      "PackagePath": "staticwebassets\\Content\\images\\hospital.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\logo.png",
+      "PackagePath": "staticwebassets\\Content\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\medicine.png",
+      "PackagePath": "staticwebassets\\Content\\images\\medicine.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\nursehead.png",
+      "PackagePath": "staticwebassets\\Content\\images\\nursehead.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\1.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\2.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\3.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\4.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\4.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\5.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\5.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\6.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\6.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\7.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\7.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\team\\8.png",
+      "PackagePath": "staticwebassets\\Content\\images\\team\\8.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\1.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\10.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\11.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\11.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\2.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\3.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\4.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\5.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\5.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\6.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\6.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\7.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\7.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\8.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\8.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\images\\upload\\gallery\\9.jpg",
+      "PackagePath": "staticwebassets\\Content\\images\\upload\\gallery\\9.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrow_left.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrow_left.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrow_left2.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrow_left2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrow_right.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrow_right.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrow_right2.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrow_right2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrowleft.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrowleft.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\arrowright.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\arrowright.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\boxed_bgtile.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\boxed_bgtile.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\bullet.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\bullet.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\bullet_boxed.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\bullet_boxed.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\bullets.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\bullets.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\bullets2.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\bullets2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\coloredbg.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\coloredbg.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\gridtile.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\gridtile.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\gridtile_3x3.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\gridtile_3x3.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\gridtile_3x3_white.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\gridtile_3x3_white.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\gridtile_white.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\gridtile_white.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\large_left.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\large_left.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\large_right.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\large_right.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\loader.gif",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\loader.gif"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\navigdots.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\navigdots.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\navigdots_bgtile.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\navigdots_bgtile.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\shadow1.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\shadow1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\shadow2.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\shadow2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\shadow3.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\shadow3.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\small_left.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\small_left.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\small_left_boxed.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\small_left_boxed.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\small_right.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\small_right.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\small_right_boxed.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\small_right_boxed.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\assets\\timer.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\assets\\timer.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\css\\settings.css",
+      "PackagePath": "staticwebassets\\Content\\plugin\\css\\settings.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\font\\revicons90c6.eot",
+      "PackagePath": "staticwebassets\\Content\\plugin\\font\\revicons90c6.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\font\\revicons90c6.svg",
+      "PackagePath": "staticwebassets\\Content\\plugin\\font\\revicons90c6.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\font\\revicons90c6.ttf",
+      "PackagePath": "staticwebassets\\Content\\plugin\\font\\revicons90c6.ttf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\font\\revicons90c6.woff",
+      "PackagePath": "staticwebassets\\Content\\plugin\\font\\revicons90c6.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\images\\gradient\\g30.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\images\\gradient\\g30.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\images\\gradient\\g40.png",
+      "PackagePath": "staticwebassets\\Content\\plugin\\images\\gradient\\g40.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\js\\jquery.themepunch.plugins.min.js",
+      "PackagePath": "staticwebassets\\Content\\plugin\\js\\jquery.themepunch.plugins.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\js\\jquery.themepunch.revolution.min.js",
+      "PackagePath": "staticwebassets\\Content\\plugin\\js\\jquery.themepunch.revolution.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\notifyjs\\lobibox.min.css",
+      "PackagePath": "staticwebassets\\Content\\plugin\\notifyjs\\lobibox.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\notifyjs\\lobibox.min.js",
+      "PackagePath": "staticwebassets\\Content\\plugin\\notifyjs\\lobibox.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\plugin\\notifyjs\\notifyjs.js",
+      "PackagePath": "staticwebassets\\Content\\plugin\\notifyjs\\notifyjs.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\css\\bootstrap-datetimepicker.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\css\\bootstrap-datetimepicker.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\css\\owl.video.play.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\css\\owl.video.play.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\css\\style.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\css\\style.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\fonts\\MaterialIcons-Regular.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\fonts\\MaterialIcons-Regular.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\fonts\\MaterialIcons-Regular.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\fonts\\MaterialIcons-Regular.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\fonts\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\Content\\theme\\fonts\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\Content\\theme\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\banner-1.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\banner-1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\banner-2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\banner-3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\banner-3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog-1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog-2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog-3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog-4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-06.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-06.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-07.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-07.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-08.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-08.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-09.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-09.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-thumb-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-thumb-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-thumb-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-thumb-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-thumb-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-thumb-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-thumb-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-thumb-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-thumb-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-thumb-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-wrap-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-wrap-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-wrap-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-wrap-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-wrap-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-wrap-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\blog\\blog-wrap-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\blog\\blog-wrap-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\category\\1.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\category\\1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\category\\2.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\category\\2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\category\\3.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\category\\3.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\category\\4.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\category\\4.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\category\\5.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\category\\5.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-4.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-5.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-5.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-6.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-6.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-7.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-7.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-8.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-8.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\clinic-9.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\clinic-9.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\spec-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\spec-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\spec-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\spec-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\clinic\\spec-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\clinic\\spec-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\daughter.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\daughter.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doc-slide-1.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doc-slide-1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctor-banner.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctor-banner.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctor-banner1.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctor-banner1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\book-doc-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\book-doc-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\book-doc-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\book-doc-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\book-doc-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\book-doc-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\book-doc-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\book-doc-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\book-doc-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\book-doc-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-06.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-06.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-07.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-07.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-08.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-08.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-09.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-09.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-11.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-11.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-12.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-12.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-06.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-06.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-07.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-07.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-08.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-08.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-09.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-09.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\doctors\\doctor-thumb-10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\doctors\\doctor-thumb-10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\dr-slider.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\dr-slider.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\father.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\father.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\featured-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\featured-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature-06.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature-06.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\features\\feature.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\features\\feature.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\flag\\gb.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\flag\\gb.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\flag\\india.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\flag\\india.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\flag\\ng.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\flag\\ng.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\flag\\usa.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\flag\\usa.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\footer-logo.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\google-map.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\google-map.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icon-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icon-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icon-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icon-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icon-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icon-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\browse-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\browse-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\browse-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\browse-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\browse-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\browse-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\browse-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\browse-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\browse-05.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\browse-05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\cardiology.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\cardiology.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-05.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-05.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-06.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-06.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-07.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-07.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-08.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-08.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-09.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-09.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-10.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-10.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-11.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-11.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-12.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-12.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-13.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-13.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-05.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-05.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-06.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-06.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-07.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-07.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-08.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-08.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-09.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-09.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\clinic-hover-10.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\clinic-hover-10.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\doct-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\doct-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\doct-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\doct-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\down-arrow-gray-dark.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\down-arrow-gray-dark.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\down-arrow-gray.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\down-arrow-gray.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\search-icon.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\search-icon.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\set-cat-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\set-cat-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\set-cat-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\set-cat-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\set-cat-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\set-cat-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\tick-icon.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\tick-icon.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\visit-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\visit-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\visit-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\visit-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\icons\\visit-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\icons\\visit-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\img-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\img-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\img-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\img-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\img-03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\img-03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\img-04.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\img-04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\img-pharmacy1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\img-pharmacy1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\lab-image.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\lab-image.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\location.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\location.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\login-banner.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\login-banner.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\login-btn.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\login-btn.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\logo.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\medical-img1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\medical-img1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\medical-img2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\medical-img2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\medical-img3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\medical-img3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\mother.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\mother.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient11.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient11.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient4.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient5.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient5.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient6.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient6.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient7.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient7.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient8.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient8.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\patients\\patient9.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\patients\\patient9.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product10.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product10.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product11.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product11.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product12.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product12.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product13.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product13.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product14.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product14.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product15.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product15.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product4.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product5.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product5.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product6.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product6.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product7.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product7.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product8.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product8.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\products\\product9.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\products\\product9.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\search-bg.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\search-bg.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\search.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\search.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\alarm.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\alarm.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\blog-img01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\blog-img01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\blog-img01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\blog-img01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\blog-img02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\blog-img02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\blog-img03.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\blog-img03.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\bro-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\bro-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\bro-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\bro-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\bro-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\bro-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\bro-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\bro-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\bro-05.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\bro-05.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\clinic-bg.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\clinic-bg.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\consult.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\consult.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\doctor-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\doctor-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\doctor-right-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\doctor-right-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\exper.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\exper.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\graph-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\graph-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\graph-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\graph-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\graph-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\graph-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\graph-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\graph-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\map-plus.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\map-plus.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\shape-1.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\shape-1.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\shape-2.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\shape-2.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\shape-3.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\shape-3.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\shape-4.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\shape-4.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-05.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-05.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-06.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-06.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec-07.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec-07.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\shapes\\spec.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\shapes\\spec.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slide1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slide1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slide2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slide2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\banner-01.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\banner-01.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\banner-02.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\banner-02.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\blue-bg.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\blue-bg.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\doctor-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\doctor-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\feature-img.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\feature-img.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\patient-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\patient-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-1.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-1.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-2.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-2.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-3.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-3.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-4.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-4.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-5.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-5.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-6.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-6.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\slider\\slider-7.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\slider\\slider-7.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\son.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\son.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\special-banner.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\special-banner.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialist-bg.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialist-bg.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\pt-dashboard-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\pt-dashboard-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\pt-dashboard-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\pt-dashboard-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\pt-dashboard-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\pt-dashboard-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\pt-dashboard-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\pt-dashboard-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\specialities-01.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\specialities-01.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\specialities-02.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\specialities-02.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\specialities-03.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\specialities-03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\specialities-04.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\specialities-04.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\specialities\\specialities-05.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\specialities\\specialities-05.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\upload-icon.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\upload-icon.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\img\\video-call.jpg",
+      "PackagePath": "staticwebassets\\Content\\theme\\img\\video-call.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\bootstrap-datetimepicker.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\bootstrap-datetimepicker.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\circle-progress.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\circle-progress.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\map.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\map.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\moment.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\profile-settings.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\profile-settings.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\script.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\script.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\js\\slick.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\js\\slick.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\apex\\apexcharts.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\apex\\apexcharts.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\apex\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\apex\\apexcharts.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\bootstrap-tagsinput\\css\\bootstrap-tagsinput.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\bootstrap-tagsinput\\js\\bootstrap-tagsinput.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\daterangepicker\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\daterangepicker\\daterangepicker.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\daterangepicker\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\daterangepicker\\daterangepicker.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\dropzone\\dropzone.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\dropzone\\dropzone.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fancybox\\jquery.fancybox.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fancybox\\jquery.fancybox.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fancybox\\jquery.fancybox.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fancybox\\jquery.fancybox.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.html"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fullcalendar\\fullcalendar.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fullcalendar\\fullcalendar.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fullcalendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fullcalendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\fullcalendar\\jquery.fullcalendar.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\fullcalendar\\jquery.fullcalendar.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\select2\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\swiper\\css\\swiper.min.css",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\swiper\\css\\swiper.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\swiper\\js\\swiper.min.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\swiper\\js\\swiper.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\theia-sticky-sidebar\\ResizeSensor.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\theia-sticky-sidebar\\ResizeSensor.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Content\\theme\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js",
+      "PackagePath": "staticwebassets\\Content\\theme\\plugins\\theia-sticky-sidebar\\theia-sticky-sidebar.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\alertify.js",
+      "PackagePath": "staticwebassets\\Scripts\\alertify.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\alertify.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\alertify.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\bootstrap.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.intellisense.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.intellisense.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.min.map",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.min.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.slim.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.slim.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.slim.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.slim.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery-3.3.1.slim.min.map",
+      "PackagePath": "staticwebassets\\Scripts\\jquery-3.3.1.slim.min.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.signalR-2.4.1.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.signalR-2.4.1.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.signalR-2.4.1.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.signalR-2.4.1.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\base\\common.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\base\\common.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\custom.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\custom.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\count.down.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\count.down.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\form-element.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\form-element.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\idangerous.swiper.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\idangerous.swiper.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\infobox.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\infobox.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery-1.10.1.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery-1.10.1.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery-migrate-1.2.1.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery-migrate-1.2.1.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery.inview.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery.inview.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery.knob.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery.knob.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery.raty.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery.raty.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\jquery.selectbox-0.2.min.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\jquery.selectbox-0.2.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\external\\modernizr.custom.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\external\\modernizr.custom.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\form.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\form.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\jquery.mobile.menu.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\jquery.mobile.menu.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\live\\edit.account.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\live\\edit.account.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\js\\live\\login.client.js",
+      "PackagePath": "staticwebassets\\Scripts\\js\\live\\login.client.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\Scripts\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\page.js",
+      "PackagePath": "staticwebassets\\Scripts\\page.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\Scripts\\scripts.js",
+      "PackagePath": "staticwebassets\\Scripts\\scripts.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\css\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\dist\\css\\bootstrap_1.css",
+      "PackagePath": "staticwebassets\\assets\\css\\dist\\css\\bootstrap_1.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\flatpickr.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\flatpickr.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\fullcalendar.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fullcalendar.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\jquery.timepicker.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery.timepicker.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\remixicon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\remixicon.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\select2.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\simplebar.css",
+      "PackagePath": "staticwebassets\\assets\\css\\simplebar.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\assets\\css\\tiny-slider.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\css\\tiny-slider.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\tiny-slider.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\fonts\\remixicon.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.woff2"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\about\\about.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\apple.png",
+      "PackagePath": "staticwebassets\\assets\\images\\apple.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\avata.png",
+      "PackagePath": "staticwebassets\\assets\\images\\avata.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\bg\\banner.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bg\\banner.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\bg\\bg-lines-one.png",
+      "PackagePath": "staticwebassets\\assets\\images\\bg\\bg-lines-one.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-an.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-an.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-doan.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-doan.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-duy.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-duy.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-hanh.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-hanh.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-huong.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-huong.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-ngoc.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-ngoc.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-oanh.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-oanh.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\doctors\\bs-tuan.png",
+      "PackagePath": "staticwebassets\\assets\\images\\doctors\\bs-tuan.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\gif\\bookingsuccess.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\gif\\bookingsuccess.gif"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\gif\\payment_failed.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\gif\\payment_failed.gif"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\gif\\payment_success.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\gif\\payment_success.gif"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\icon-logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon-logo.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\logo-dark.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-dark.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\logo-icon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-icon.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\logo-light.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-light.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\medical.png",
+      "PackagePath": "staticwebassets\\assets\\images\\medical.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\03.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\04.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\05.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\06.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\07.jpg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\service\\08.png",
+      "PackagePath": "staticwebassets\\assets\\images\\service\\08.png"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\svg\\401.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg\\401.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\svg\\500.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg\\500.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\svg\\error.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg\\error.svg"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\images\\wave-waving.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\wave-waving.gif"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\apexcharts.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\ckeditor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ckeditor.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\columnchart.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\columnchart.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\counter.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\counter.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\feather.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\feather.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\flatpickr.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\flatpickr.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\flatpickr.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\flatpickr.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\fullcalendar.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\fullcalendar.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\jquery.timepicker.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.timepicker.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\select2.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\select2.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\simplebar.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\slick.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\timepicker.init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\timepicker.init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\tiny-slider-init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tiny-slider-init.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tiny-slider.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\js\\vn.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vn.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_animated.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_core.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_extras.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_extras.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_icons.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_path.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\assets\\scss\\materialdesignicons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\materialdesignicons.scss"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\css\\NewFolder\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\NewFolder\\StyleSheet.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\css\\PatientList.css",
+      "PackagePath": "staticwebassets\\css\\PatientList.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\css\\StyleSheet1.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet1.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BAO\\MAJOR\\SE5\\swp_quang\\SWP_DocCare-quang1\\SWP_DocCare-quang1\\test2\\test2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.test2.props",
+      "PackagePath": "build\\test2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.test2.props",
+      "PackagePath": "buildMultiTargeting\\test2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.test2.props",
+      "PackagePath": "buildTransitive\\test2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.test2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

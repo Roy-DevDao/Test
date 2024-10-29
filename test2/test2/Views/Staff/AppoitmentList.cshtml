@@ -1,0 +1,192 @@
+@model List<test2.Models.StaffModel.AppointmentViewModel>
+@{
+    Layout = "Layout_staff";
+    ViewData["Title"] = "Appointment List from Staff";
+}
+
+<div class="container-fluid">
+    <div class="layout-specing">
+        <div class="row">
+            <div class="col-md-3 row">
+                <div class="col-md-4">
+                    <h5 class="mb-0">Appointments</h5>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between">
+                    <!-- Form Tìm kiếm -->
+                    <form action="AppoitmentList" method="POST" class="d-flex align-items-center me-2">
+                        <label class="form-label mb-0 me-2">Search:</label>
+                        <input type="text" name="search_doctor" class="form-control me-2" placeholder="Enter doctor name" required />
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+                    <!-- Form Lọc -->
+                    <form action="AppoitmentList" method="POST" class="d-flex align-items-center">
+                        <label class="form-label mb-0 me-2">Status:</label>
+                        <select name="status" class="form-select me-2" aria-label="Default select example">
+                            <option value="all">All</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Canceled">Canceled</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </form>
+                </div>
+            </div>
+
+
+        <div class="row">
+            <div class="col-12 mt-4">
+                <div class="table-responsive bg-white shadow rounded">
+                    <table class="table mb-0 table-center">
+                        @* <thead>
+                            <tr>
+                                <th class="border-bottom p-3">ID</th>
+                                <th class="border-bottom p-3">Patient</th>
+                                <th class="border-bottom p-3">Doctor</th>
+                                <th class="border-bottom p-3">Date</th>
+                                <th class="border-bottom p-3">Status</th>
+                                <th class="border-bottom p-3"></th>
+                            </tr>
+                        </thead> *@
+                            <thead>
+                                <tr>
+                                    <th class="border-bottom p-3">
+                                        ID
+                                        <a asp-action="AppoitmentList" asp-route-sortColumn="AppointmentId" asp-route-sortDirection="@((ViewBag.SortColumn == "AppointmentId" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                                            <i class="@(ViewBag.SortColumn == "AppointmentId" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                                        </a>
+                                    </th>
+                                    <th class="border-bottom p-3">
+                                        Patient
+                                        <a asp-action="AppoitmentList" asp-route-sortColumn="PatientName" asp-route-sortDirection="@((ViewBag.SortColumn == "PatientName" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                                            <i class="@(ViewBag.SortColumn == "PatientName" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                                        </a>
+                                    </th>
+                                    <th class="border-bottom p-3">
+                                        Doctor
+                                        <a asp-action="AppoitmentList" asp-route-sortColumn="DoctorName" asp-route-sortDirection="@((ViewBag.SortColumn == "DoctorName" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                                            <i class="@(ViewBag.SortColumn == "DoctorName" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                                        </a>
+                                    </th>
+                                    <th class="border-bottom p-3">
+                                        Date
+                                        <a asp-action="AppoitmentList" asp-route-sortColumn="AppointmentDate" asp-route-sortDirection="@((ViewBag.SortColumn == "AppointmentDate" && ViewBag.SortDirection == "asc") ? "desc" : "asc")">
+                                            <i class="@(ViewBag.SortColumn == "AppointmentDate" ? (ViewBag.SortDirection == "asc" ? "fa fa-sort-up" : "fa fa-sort-down") : "fa fa-sort")"></i>
+                                        </a>
+                                    </th>
+                                    <th class="border-bottom p-3">
+                                        Status
+                                        
+                                    </th>
+                                </tr>
+                            </thead>
+
+
+                        <tbody>
+                            @foreach (var appointment in Model)
+
+                            {
+                                <tr>
+                                    <td class="p-3">@appointment.AppointmentId</td>
+                                    <td class="p-3">@appointment.PatientName</td>
+                                    <td class="p-3">@appointment.DoctorName</td>
+                                    <td class="p-3">@appointment.AppointmentDate.ToString("dd/MM/yyyy")</td>
+                                    <td class="p-3">@appointment.Status</td>
+                                        <td class="text-end p-3">
+                                            <a asp-area="" asp-controller="Staff" asp-action="AppointmentDetail" asp-route-id="@appointment.AppointmentId" type="button" class="btn btn-info">Details</a>
+                                        </td>
+
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+            <div class="row text-center">
+                <div class="col-12 mt-4">
+                    <div class="d-md-flex align-items-center text-center justify-content-between">
+                        <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+                            @if (ViewBag.PageNumber > 1)
+
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-action="AppoitmentList"
+                                       asp-route-gender="@ViewBag.Gender"
+                                       asp-route-speciality="@ViewBag.Speciality"
+                                       asp-route-sort="@ViewBag.Sort"
+                                       asp-route-pageNumber="@(ViewBag.PageNumber - 1)"
+                                       aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+
+                            {
+
+                                if (i <= 4 || i == ViewBag.TotalPages || (i == ViewBag.PageNumber - 1) || (i == ViewBag.PageNumber + 1))
+
+                                {
+                                    <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                                        <a class="page-link" asp-action="AppoitmentList"
+                                           asp-route-gender="@ViewBag.Gender"
+                                           asp-route-speciality="@ViewBag.Speciality"
+                                           asp-route-sort="@ViewBag.Sort"
+                                           asp-route-pageNumber="@i">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
+
+                                else if (i == 5 && ViewBag.PageNumber > 5)
+
+                                {
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                                }
+
+                            }
+
+                            @if (ViewBag.PageNumber < ViewBag.TotalPages)
+
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-action="AppoitmentList"
+                                       asp-route-gender="@ViewBag.Gender"
+                                       asp-route-speciality="@ViewBag.Speciality"
+                                       asp-route-sort="@ViewBag.Sort"
+                                       asp-route-pageNumber="@(ViewBag.PageNumber + 1)"
+                                       aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<style>
+    .table td, .table th {
+        vertical-align: middle; /* Giữ nội dung thẳng hàng theo chiều dọc */
+    }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .me-2 {
+            margin-right: 0.5rem; /* Khoảng cách giữa các phần tử */
+        }
+    </style>

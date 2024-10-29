@@ -1,0 +1,27 @@
+﻿@model test2.Models.Momo.MomoExecuteResponseModel
+@{
+    ViewData["Title"] = "Kết quả thanh toán";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h2>@ViewBag.Message</h2>
+        <p>Chi tiết thanh toán:</p>
+        <ul class="list-unstyled">
+            <li><strong>Mã hóa đơn:</strong> @Model.OrderId</li>
+            <li><strong>Số tiền:</strong> @Model.Amount VNĐ</li>
+            <li><strong>Nội dung:</strong> @Model.OrderInfo</li>
+        </ul>
+
+        @if (ViewBag.Status == "success")
+        {
+            <p class="text-success">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
+            <a href="/" class="btn btn-primary">Quay lại trang chủ</a>
+        }
+        else
+        {
+            <p class="text-danger">Xin lỗi, đã xảy ra lỗi khi thanh toán. Vui lòng thử lại sau.</p>
+            <a href="/Patient/CreatePaymentUrl" class="btn btn-warning">Thử lại</a>
+        }
+    </div>
+</div>

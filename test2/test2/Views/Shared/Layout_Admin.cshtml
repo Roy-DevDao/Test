@@ -1,0 +1,268 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocCare-Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+8hb7x1Z4F8qMiAx9W0KVBshF2gIu92dQnjxyJ6" crossorigin="anonymous">
+
+
+
+
+    @RenderSection("Styles", required: false)
+    <style>
+        /* Ẩn văn bản bên trong sidebar khi thu gọn */
+        .sidebar-collapsed .sidebar-text {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            transition: opacity 0.3s, width 0.3s;
+        }
+        /* Modify the size of the avatar in the button */
+        .avatar-ex-small {
+            width: 30px; /* Change this to the desired width */
+            height: 30px; /* Change this to the desired height */
+        }
+
+        /* Modify the size of the user icon in the dropdown */
+        .avatar-md-sm {
+            width: 50px; /* Change this to the desired width */
+            height: 50px; /* Change this to the desired height */
+        }
+
+        .dropdowns {
+            position: relative;
+            top: 10px;
+        }
+
+        .dropdown-primary {
+            position: relative;
+            top: -10px
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen">
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 fixed top-0 left-0 h-full transition-all duration-300">
+        <div id="logo" class="flex items-center h-16 px-6 bg-white border-b transition-all duration-300">
+            <a asp-controller="Admin" asp-action="Index">
+                <img src="~/assets/images/medical.png" height="80" width="120" class="logo--mode" alt="">
+            </a>
+        </div>
+        <nav class="mt-6">
+            <!-- Dashboard -->
+            <div>
+                <button id="dashboardToggle" class="flex items-center justify-between px-6 py-2.5 w-full text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                    <div class="flex items-center">
+                        <i class="fas fa-tachometer-alt text-lg"></i>
+                        <span class="ml-3 sidebar-text">Thống Kê</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" id="dashboardIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="dashboardSubmenu" class="ml-12 max-h-0 overflow-hidden transition-all duration-300">
+                    <a asp-controller="Admin" asp-action="Index" class="block py-2 text-gray-700 hover:text-gray-900">+ Analytics</a>
+                    <a asp-controller="Admin" asp-action="Index1" class="block py-2 text-gray-700 hover:text-gray-900">+ Analytics</a>
+                </div>
+            </div>
+
+            <!-- Manage Services -->
+            <div>
+                <button id="serviceToggle" class="flex items-center justify-between px-6 py-2.5 w-full text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                    <div class="flex items-center">
+                        <i class="fas fa-cogs text-lg"></i>
+                        <span class="ml-3 sidebar-text">Quản Lí Dịch Vụ</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" id="serviceIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="serviceSubmenu" class="ml-12 max-h-0 overflow-hidden transition-all duration-300">
+                    <a asp-controller="Admin" asp-action="AddService" class="block py-2 text-gray-700 hover:text-gray-900">+ Thêm dịch vụ</a>
+                    <a asp-controller="Admin" asp-action="ManageService" class="block py-2 text-gray-700 hover:text-gray-900">+ Danh sách dịch vụ</a>
+                </div>
+            </div>
+
+            <!-- Manage Doctors -->
+            <div>
+                <button id="doctorToggle" class="flex items-center justify-between px-6 py-2.5 w-full text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                    <div class="flex items-center">
+                        <i class="fas fa-user-md text-lg"></i>
+                        <span class="ml-3 sidebar-text">Quản Lí Bác Sĩ</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" id="doctorIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="doctorSubmenu" class="ml-12 max-h-0 overflow-hidden transition-all duration-300">
+                    <a asp-controller="Admin" asp-action="AddDoctor" class="block py-2 text-gray-700 hover:text-gray-900">+ Thêm bác sĩ</a>
+                    <a asp-controller="Admin" asp-action="ManageDoctor" class="block py-2 text-gray-700 hover:text-gray-900">+ Danh sách bác sĩ</a>
+                </div>
+            </div>
+
+            <!-- Manage Patients -->
+            <div>
+                <button id="patientToggle" class="flex items-center justify-between px-6 py-2.5 w-full text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                    <div class="flex items-center">
+                        <i class="fas fa-procedures text-lg"></i>
+                        <span class="ml-3 sidebar-text">Quản Lí Bệnh Nhân</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform" id="patientIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="patientSubmenu" class="ml-12 max-h-0 overflow-hidden transition-all duration-300">
+                    <a asp-controller="Admin" asp-action="AddPatient" class="block py-2 text-gray-700 hover:text-gray-900">+ Thêm bệnh nhân</a>
+                    <a asp-controller="Admin" asp-action="ManagePatient" class="block py-2 text-gray-700 hover:text-gray-900">+ Danh sách bệnh nhân</a>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div id="mainContent" class="ml-64 flex-1 flex flex-col h-screen overflow-hidden transition-all duration-300">
+        <!-- Header -->
+        <header id="header" class="abc flex justify-between items-center h-16 px-6 bg-white shadow fixed top-0 left-64 right-0 z-10 transition-all duration-300">
+            <div class="flex items-center">
+                <!-- Toggle Sidebar Button -->
+                <button id="sidebarToggle" class="p-2 rounded-md focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex-grow text-center">
+                <h1 class="text-lg font-semibold">Hệ thống Quản lý Quản trị</h1>
+            </div>
+
+            <ul class="dropdowns list-inline mb-0">
+                <li class="list-inline-item mb-0 ms-1">
+                    <div class="dropdown dropdown-primary">
+
+
+                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"></path>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
+                        </a>
+
+                        <!-- Hidden form for logout -->
+                        <form id="logout-form" action="@Url.Action("Logout", "Home")" method="POST" style="display: none;">
+                            @* Add anti-forgery token for security *@
+                            @Html.AntiForgeryToken()
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </header>
+
+        <!-- Page content -->
+        <main class="p-6 mt-16 bg-gray-50 flex-1 overflow-auto">
+            @RenderBody()
+
+
+        </main>
+        <footer class="bg-white shadow py-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="text-sm-start text-center">
+                            <p class="mb-0 text-muted">
+                                <script>
+                                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                                    const today = new Date().toLocaleDateString('vi-VN', options);
+                                    document.write(today);
+                                </script>
+                                © DocCare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <script>
+
+        // Mảng chứa các thông tin toggle (button, submenu, icon)
+        const toggles = [
+            { button: 'dashboardToggle', submenu: 'dashboardSubmenu', icon: 'dashboardIcon' },
+            { button: 'serviceToggle', submenu: 'serviceSubmenu', icon: 'serviceIcon' },
+            { button: 'doctorToggle', submenu: 'doctorSubmenu', icon: 'doctorIcon' },
+            { button: 'patientToggle', submenu: 'patientSubmenu', icon: 'patientIcon' }
+        ];
+
+        // Lặp qua các nút và submenu
+        toggles.forEach(({ button, submenu, icon }) => {
+            const btn = document.getElementById(button);
+            const menu = document.getElementById(submenu);
+            const iconEl = document.getElementById(icon);
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.contains('max-h-32');
+                menu.classList.toggle('max-h-32', !isOpen);
+                menu.classList.toggle('max-h-0', isOpen);
+                iconEl.classList.toggle('rotate-180');
+            });
+        });
+
+        // Danh sách ID của tất cả các submenu
+        const submenuIds = ['dashboardSubmenu', 'serviceSubmenu', 'doctorSubmenu', 'patientSubmenu'];
+
+        // Toggle Sidebar
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        const header = document.getElementById('header');
+        const logo = document.getElementById('logo');
+
+        sidebarToggle.addEventListener('click', () => {
+            const isCollapsed = sidebar.classList.contains('w-16');
+
+            // Thu gọn sidebar
+            sidebar.classList.toggle('w-16', !isCollapsed);
+            sidebar.classList.toggle('sidebar-collapsed', !isCollapsed); // Ẩn chữ khi thu gọn
+
+            // Mở rộng nội dung chính
+            mainContent.classList.toggle('ml-64', isCollapsed);
+            mainContent.classList.toggle('ml-16', !isCollapsed);
+            header.classList.toggle('left-64', isCollapsed);
+            header.classList.toggle('left-16', !isCollapsed);
+
+            // Nếu sidebar thu gọn, đóng tất cả submenu
+            if (!isCollapsed) {
+                submenuIds.forEach(id => {
+                    const submenu = document.getElementById(id);
+                    submenu.classList.remove('max-h-32'); // Đóng submenu
+                    submenu.classList.add('max-h-0');     // Đảm bảo submenu được ẩn
+                    // Đặt lại trạng thái xoay icon
+                    const icon = document.getElementById(`${id.replace('Submenu', 'Icon')}`);
+                    if (icon) {
+                        icon.classList.remove('rotate-180'); // Xóa class xoay icon
+                    }
+                });
+            }
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-6aTzQVgGZ3OwJFeU9NzNSdeyjpHCXSa/AaA0ocBZXnCB2WUGryC9hj8wJ9H0rNfN" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿﻿﻿@{
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";  // Layout chính mà bạn đã định nghĩa
+}
+
+@section Styles {
+    <style>
+        .layout-default_body_main {
+            width: 100%;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Container chỉnh sửa dịch vụ */
+        .edit-service-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* Tiêu đề */
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Nhóm biểu mẫu */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Trường nhập liệu */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            transition: border-color 0.3s ease;
+        }
+
+            input:focus, textarea:focus {
+                border-color: #0D6EFD;
+                outline: none;
+                background-color: #fff;
+            }
+
+        /* Textarea cho trường mô tả */
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Nút Lưu */
+        .save-button {
+            padding: 12px;
+            background-color: #0D6EFD;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+            .save-button:hover {
+                background-color: #45a049;
+            }
+    </style>
+}
+
+<main class="layout-default_body_main">
+    <h1>Chỉnh sửa thông tin dịch vụ</h1>
+
+    <form asp-action="EditService" method="post">
+        <input type="hidden" id="SpecialtyId" name="SpecialtyId" value="@Model.SpecialtyId" />
+
+        <div class="form-group">
+            <label for="SpecialtyName">Tên dịch vụ:</label>
+            <input type="text" id="SpecialtyName" name="SpecialtyName" value="@Model.SpecialtyName" placeholder="Nhập tên dịch vụ" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="ShortDescription">Mô tả ngắn:</label>
+            <textarea id="ShortDescription" name="ShortDescription" placeholder="Nhập mô tả ngắn" class="form-control">@Model.ShortDescription</textarea>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="SpecialtyImg">URL hình ảnh:</label>
+            <input type="text" id="SpecialtyImg" name="SpecialtyImg" value="@Model.SpecialtyImg" placeholder="Nhập URL hình ảnh" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+    </form>
+</main>

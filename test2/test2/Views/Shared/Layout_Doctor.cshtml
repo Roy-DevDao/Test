@@ -1,0 +1,167 @@
+﻿@model List<test2.Models.DoctorModel.BaseViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DocCare</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DontCare.styles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="https://shreethemes.in/Doccare/layouts/assets/images/favicon.ico">
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/remixicon.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/assets/css/tiny-slider.css" />
+    <link href="~/assets/css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt" />
+    <link href="~/assets/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/flatpickr.min.css">
+    <link href="~/assets/css/jquery.timepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/assets/js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <style>
+        .dark\:text-white {
+            color: black;
+        }
+
+        .dark\:bg-gray-800 {
+            background-color: white;
+        }
+    </style>
+
+    <header id="topnav" class="navigation sticky">
+        <div class="container flex justify-between">
+            <div class="flex items-center">
+                <div>
+                    <button type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+                        </svg>
+                    </button>
+
+                </div>
+                <div>
+                    <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/assets/images/medical.png" height="57" width="107" class="logo--mode" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="navigation">
+                <ul class="navigation-menu nav-left">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="sub-menu-item">Trang Chủ</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="DoctorList" class="sub-menu-item">Bác Sĩ</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="ServiceList" class="sub-menu-item">Dịch Vụ</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </header>
+
+
+    <div class="container ">
+
+
+
+
+        <aside id="drawer-navigation" class="fixed top-0 left-0 z-50 w-72 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+
+            <div class="h-full px-3 py-4  overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <div class="flex justify-center items-center p-6">
+                    <!-- Avatar Image -->
+                    <img class="h-32 w-32 rounded-full border-4 border-blue-500 shadow-lg" src="@Model.First().DoctorImg" alt="Avatar">
+                </div>
+                <ul class="space-y-2 font-medium">
+                    <li>
+                        <a asp-area="" asp-controller="Doctor" asp-action="Profile" asp-route-id="@Model.First().DId" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                                <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                                <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                            </svg>
+                            <span class="ms-3">Thông Tin Cá Nhân</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Doctor" asp-action="ViewAppointment" asp-route-id="@Model.First().DId" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                                <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                                <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                            </svg>
+                            <span class="ms-3">Cuộc Hẹn Của Tôi</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-area="" asp-controller="Doctor" asp-action="ViewPatient" asp-route-id="@Model.First().DId" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v3m5-3v3m5-3v3M1 7h7m1.506 3.429 2.065 2.065M19 7h-2M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm6 13H6v-2l5.227-5.292a1.46 1.46 0 0 1 2.065 2.065L8 16Z"></path>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Bệnh Nhân </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-area="" asp-controller="Doctor" asp-action="Feedback" asp-route-id="@Model.First().DId" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                <path d="M5.022 4.764c.489 0 .75-.37.8-.856l.188-1.877A.952.952 0 0 0 5.063.985H2.791a1.127 1.127 0 0 0-1.067.749A16.11 16.11 0 0 0 1 7a16.737 16.737 0 0 0 .743 5.242c.154.463 1.748.773 2.236.773H5a.95.95 0 0 0 .946-1.046l-.188-1.877a.95.95 0 0 0-.946-.856h-.761A14.627 14.627 0 0 1 3.937 7c-.02-.747.019-1.495.114-2.236h.971Zm13.365 7.592L18.6 11H14a1 1 0 0 1 0-2h4.918l.159-1H14a1 1 0 1 1 0-2h5.393l.158-1H14a1 1 0 1 1 0-2h5.868l.111-.7a2.04 2.04 0 0 0-.473-1.629A1.912 1.912 0 0 0 18.063 0H9a1 1 0 0 0-1 1v11.78A2.985 2.985 0 0 0 7 15v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a2.991 2.991 0 0 0-1.613-2.644Z"></path>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Phản Hồi</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"></path>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Đăng Xuất</span>
+                        </a>
+
+                        <!-- Hidden form for logout -->
+                        <form id="logout-form" action="@Url.Action("Logout", "Home")" method="POST" style="display: none;">
+                            @* Add anti-forgery token for security *@
+                            @Html.AntiForgeryToken()
+                        </form>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+
+
+    </div>
+    <div class="p-4 mb-5 ">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,357 @@
+﻿﻿﻿@{
+    Layout = "Layout_Admin";  // Your main layout
+}
+
+@section Scripts {
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+@section Styles {
+    <style>
+        .layout-default_body_main {
+            width: 100%;
+        }
+
+        form {
+            margin: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .first-text {
+            font-size: xx-large;
+            color: #4A5568;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .cancel-btn, .save-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cancel-btn {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .save-btn {
+            background-color: #0D6EFD;
+            color: #fff;
+        }
+
+            .save-btn:hover {
+                background-color: #357ABD;
+            }
+
+        .cancel-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+}
+
+@model test2.Models.AdminModel.AddDoctorViewModel
+
+<main class="layout-default_body_main">
+    <form method="post" asp-action="AddDoctor" enctype="multipart/form-data">
+        @if (!ViewData.ModelState.IsValid)
+
+        {
+            <div class="alert alert-danger">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+        }
+
+        <div class="section">
+            <h1 class="first-text">Thông tin bác sĩ</h1>
+            <div class="grid-container">
+                <!-- Account ID -->
+                <div class="grid-item">
+                    <label for="AccountId">Mã Tài Khoản</label>
+                    <input class="form-control" id="AccountId" name="AccountId" type="text" placeholder="Mã tài khoản" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Doctor ID -->
+                <div class="grid-item">
+                    <label asp-for="Did">Mã Bác Sĩ</label>
+                    <input asp-for="Did" class="form-control" placeholder="Mã bác sĩ" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Full Name -->
+                <div class="grid-item">
+                    <label asp-for="Name">Họ và tên</label>
+                    <input asp-for="Name" class="form-control" placeholder="Họ và tên" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="grid-item">
+                    <label asp-for="Phone">Số điện thoại</label>
+                    <input asp-for="Phone" class="form-control" type="tel" placeholder="Số điện thoại" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <div class="grid-item">
+                    <label asp-for="Gender">Giới tính</label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+
+                <!-- Date of Birth -->
+                @* <div class="grid-item">
+                <label asp-for="Dob">Ngày sinh</label>
+                <input asp-for="Dob" class="form-control" type="date" />
+                <span class="text-danger"></span>
+                </div> *@
+                <div class="grid-item">
+                    <label asp-for="Dob">Ngày sinh</label>
+                    <input asp-for="Dob" class="form-control" type="date" />
+                    <span class="text-danger">@Html.ValidationMessageFor(model => model.Dob)</span>
+                </div>
+
+                <!-- Position -->
+                <div class="grid-item">
+                    <label asp-for="Position">Chức vụ</label>
+                    <input asp-for="Position" class="form-control" placeholder="Chức vụ" />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Price -->
+                <div class="grid-item">
+                    <label asp-for="Price">Giá</label>
+                    <input asp-for="Price" class="form-control" type="number" step="0.01" placeholder="Giá" />
+                    <span class="text-danger"></span>
+                </div>                <!-- Doctor Image Upload -->
+                <div class="grid-item">
+                    <label asp-for="DoctorImgUpload">Ảnh Bác Sĩ</label>
+                    <input asp-for="DoctorImgUpload" type="file" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.DoctorImgUpload, "", new { @class = "text-danger" })
+                    <p class="help-block">Upload ảnh cho bác sĩ.</p>
+                </div>
+                <div class="grid-item">
+                    <label asp-for="Description">Giới thiệu</label>
+                    <input asp-for="Description" class="form-control" placeholder="Giới thiệu" />
+                    <span class="text-danger"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="submit-container">
+            <button type="button" class="cancel-btn" onclick="window.location.href='@Url.Action("ManageDoctor", "Admin")'">Hủy</button>
+            <button type="submit" class="save-btn">Lưu</button>
+        </div>
+    </form>
+</main>
+
+<script>
+    document.getElementById("Dob").addEventListener("input", function () {
+        const dob = new Date(this.value);
+        const ageError = document.getElementById("age-error");
+
+        // Kiểm tra nếu ngày sinh hợp lệ
+        if (!isNaN(dob)) {
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+            const dayDiff = today.getDate() - dob.getDate();
+
+            // Điều chỉnh tuổi nếu tháng và ngày sinh chưa đến
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+
+            // Hiển thị lỗi nếu tuổi nhỏ hơn 20
+            if (age < 20) {
+                ageError.innerText = "Tuổi phải lớn hơn hoặc bằng 20.";
+            } else {
+                ageError.innerText = ""; // Xóa thông báo lỗi nếu tuổi hợp lệ
+            }
+        } else {
+            ageError.innerText = ""; // Xóa thông báo lỗi nếu không có ngày sinh hợp lệ
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const accountIdInput = document.getElementById('AccountId');
+        const doctorIdInput = document.getElementById('Did');
+        const nameInput = document.getElementById('Name');
+        const phoneInput = document.getElementById('Phone');
+        const dobInput = document.getElementById('Dob');
+        const positionInput = document.getElementById('Position');
+        const priceInput = document.getElementById('Price');
+
+        // Helper functions to show and clear errors
+        function showError(elementId, message) {
+            const errorElement = document.querySelector(`#${elementId} + .text-danger`);
+            if (errorElement) {
+                errorElement.textContent = message;
+            }
+        }
+
+        function clearError(elementId) {
+            const errorElement = document.querySelector(`#${elementId} + .text-danger`);
+            if (errorElement) {
+                errorElement.textContent = '';
+            }
+        }
+
+        // Validation functions
+        function validateId(inputElement, fieldName) {
+            const value = inputElement.value;
+            const regex = /^[A-Za-z]\d+$/; // Starts with a letter followed by digits
+
+            if (!value) {
+                showError(inputElement.id, `${fieldName} là bắt buộc.`);
+            } else if (!regex.test(value)) {
+                showError(inputElement.id, `${fieldName} phải bắt đầu bằng chữ cái và theo sau là các chữ số.`);
+            } else {
+                clearError(inputElement.id);
+            }
+        }
+
+        function validateVietnameseName() {
+            const value = nameInput.value;
+            const vietnameseRegex = /^[A-Za-zÀ-ỹ\s]*$/u;
+
+            if (!value) {
+                showError('Name', 'Họ và tên là bắt buộc.');
+            } else if (!vietnameseRegex.test(value)) {
+                showError('Name', 'Họ và tên chỉ chứa chữ cái (bao gồm tiếng Việt).');
+            } else {
+                clearError('Name');
+            }
+        }
+
+        function validatePhoneNumber() {
+            const value = phoneInput.value;
+            const phoneRegex = /^\d{10}$/;
+
+            if (!value) {
+                showError('Phone', 'Số điện thoại là bắt buộc.');
+            } else if (!phoneRegex.test(value)) {
+                showError('Phone', 'Số điện thoại phải bao gồm 10 chữ số.');
+            } else {
+                clearError('Phone');
+            }
+        }
+
+        function validateDob() {
+            const dobValue = dobInput.value;
+            if (!dobValue) {
+                showError('Dob', 'Ngày sinh là bắt buộc.');
+                return;
+            }
+
+            const dobDate = new Date(dobValue);
+            const today = new Date();
+            let age = today.getFullYear() - dobDate.getFullYear();
+            const monthDifference = today.getMonth() - dobDate.getMonth();
+            const dayDifference = today.getDate() - dobDate.getDate();
+
+            if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+                age--;
+            }
+
+            if (dobDate >= today) {
+                showError('Dob', 'Ngày sinh phải là ngày trong quá khứ.');
+            } else if (age < 18) {
+                showError('Dob', 'Bác sĩ phải ít nhất 18 tuổi.');
+            } else {
+                clearError('Dob');
+            }
+        }
+
+        function validatePosition() {
+            const value = positionInput.value;
+            const vietnameseRegex = /^[A-Za-zÀ-ỹ\s]*$/u;
+
+            if (!value) {
+                showError('Position', 'Chức vụ là bắt buộc.');
+            } else if (!vietnameseRegex.test(value)) {
+                showError('Position', 'Chức vụ chỉ chứa chữ cái (bao gồm tiếng Việt).');
+            } else {
+                clearError('Position');
+            }
+        }
+
+        function validatePrice() {
+            const value = parseFloat(priceInput.value);
+
+            if (isNaN(value) || value <= 0) {
+                showError('Price', 'Giá phải là một số dương.');
+            } else {
+                clearError('Price');
+            }
+        }
+
+        // Event listeners
+        accountIdInput.addEventListener('input', function () {
+            validateId(accountIdInput, 'Mã Tài Khoản');
+        });
+
+        doctorIdInput.addEventListener('input', function () {
+            validateId(doctorIdInput, 'Mã Bác Sĩ');
+        });
+
+        nameInput.addEventListener('input', validateVietnameseName);
+        phoneInput.addEventListener('input', validatePhoneNumber);
+        dobInput.addEventListener('input', validateDob);
+        positionInput.addEventListener('input', validatePosition);
+        priceInput.addEventListener('input', validatePrice);
+    });
+</script>

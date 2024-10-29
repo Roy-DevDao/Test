@@ -1,0 +1,173 @@
+﻿@model test2.Models.UserProfileViewModel
+@{
+    ViewBag.Title = "Sửa trang cá nhân";
+    Layout = "~/Views/Shared/Layout_Staff.cshtml";
+}
+
+<style>
+    /* Reset các margin và padding */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif; /* Font chữ cho toàn bộ trang */
+        height: 100%; /* Chiều cao 100% cho body */
+    }
+
+    .main-content {
+        padding: 60px; /* Tăng khoảng cách cho phần chính */
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        height: calc(100vh - 60px); /* Đảm bảo form căn giữa trên màn hình */
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng màn hình */
+    }
+
+    .section-content {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px; /* Tăng khoảng cách bên trong container */
+        display: flex; /* Sử dụng flexbox cho bố cục */
+        justify-content: space-between; /* Tạo khoảng cách giữa các form */
+        width: 100%; /* Giới hạn chiều rộng container */
+        max-width: 1200px; /* Đặt chiều rộng tối đa cho container */
+        margin: auto; /* Căn giữa container trên trang */
+    }
+
+    h4 {
+        margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+        font-size: 24px; /* Kích thước tiêu đề */
+        color: #343a40; /* Màu tiêu đề */
+    }
+
+    .icon-box {
+        display: flex; /* Flexbox cho icon và tiêu đề */
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
+
+    .icon {
+        margin-right: 15px; /* Khoảng cách giữa icon và tiêu đề */
+    }
+
+    .form-group {
+        margin-bottom: 30px; /* Khoảng cách giữa các nhóm form */
+    }
+
+    .form-control {
+        border-radius: 4px; /* Bo góc cho các input */
+        border: 1px solid #ced4da; /* Viền cho input */
+        transition: border-color 0.2s; /* Hiệu ứng chuyển màu cho viền */
+    }
+
+        .form-control:focus {
+            border-color: #007bff; /* Màu viền khi focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng bóng khi focus */
+        }
+
+    .btn {
+        border-radius: 5px; /* Bo góc cho nút */
+        padding: 10px; /* Padding cho nút */
+    }
+
+    .btn-success {
+        background-color: #28a745; /* Màu nền cho nút cập nhật */
+    }
+
+        .btn-success:hover {
+            background-color: #218838; /* Màu nền khi hover */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Màu nền cho nút đổi mật khẩu */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+
+    .text-center {
+        text-align: center; /* Căn giữa chữ */
+    }
+
+</style>
+
+<!-- Start main-content -->
+<div class="main-content">
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <!-- Form Update Thông Tin -->
+                    <div class="col-md-6">
+                        <form name="reg-form" class="register-form" method="post" id="frmEdit">
+                            <div class="icon-box mb-0 p-0">
+                                <a href="#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
+                                    <i class="pe-7s-users"></i>
+                                </a>
+                                <h4 class="text-gray pt-10 mt-0 mb-30">Thông tin tài khoản</h4>
+                            </div>                            
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_choose_username">Tên đăng nhập</label>
+                                    <input id="form_choose_username" name="Username" class="form-control" type="text" required disabled value="@Model.Username">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form_email">Email</label>
+                                    <input id="form_email" name="Email" class="form-control" type="email" value="@Model.Email" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                            </div>                          
+                        </form>
+                    </div>
+
+                    <!-- Form Đổi Mật Khẩu -->
+                    <div class="col-md-6">
+                        <form asp-action="ChangePassword" method="post">
+                            <h4>Đổi mật khẩu</h4>
+                            <div class="form-group">
+                                <label for="OldPassword">Mật khẩu cũ</label>
+                                <input name="oldPassword" id="OldPassword" class="form-control" type="password" required minlength="6" maxlength="100" />
+                                <span asp-validation-for="OldPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="NewPassword">Mật khẩu mới</label>
+                                <input name="newPassword" id="NewPassword" class="form-control" type="password" required minlength="6" maxlength="100" />
+                                <span asp-validation-for="NewPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="RePassword">Nhập lại mật khẩu mới</label>
+                                <input name="RePassword" id="RePassword" class="form-control" type="password" required minlength="6" maxlength="100" />
+                                <span asp-validation-for="RePassword" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">Cập nhật</button>
+                            </div>
+
+                            <!-- Hiển thị thông báo lỗi từ server -->
+                            @if (TempData["ErrorMessage"] != null)
+                            {
+                                <div class="alert alert-danger">
+                                    @TempData["ErrorMessage"]
+                                </div>
+                            }
+
+                            @if (TempData["SuccessMessage"] != null)
+                            {
+                                <div class="alert alert-success">
+                                    @TempData["SuccessMessage"]
+                                </div>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- end main-content -->
+@section Scripts {
+}

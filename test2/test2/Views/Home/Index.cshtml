@@ -1,0 +1,363 @@
+﻿@{
+    var doctors = ViewBag.Doctors as IEnumerable<test2.Data.Doctor>;
+
+    var specialties = ViewBag.Specialties as IEnumerable<test2.Data.Specialty>;
+
+}
+@{
+    Layout = "Layout_new";
+
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="bg-half-260 d-table w-100" style="background: url('@Url.Content("~/assets/images/bg/banner.jpg")') center;">
+    <div class="bg-overlay bg-overlay-"></div>
+    <div class="container">
+        <div class="row mt-5 mt-lg-0">
+            <div class="col-12">
+                <div class="heading-title">
+                    <img src="assets/images/icon-logo.png" height="5" width="5" alt="">
+                    <h4 class="display-4 fw-bold text-white title- mt-3 mb-4">
+                        <br>
+                        Online Healthcare <br> Registration System
+                    </h4>
+                    <p class="para-desc text-white-50 mb-0">If you or your loved one needs immediate assistance, emergency treatment through a simple consultation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="features-absolute bg-white shadow rounded overflow-hidden card-group">
+                    <div class="card border-0 bg-light p-4">
+                        <i class="ri-heart-pulse-fill text-primary h2 mb-0"></i>
+                        <h5 class="mt-1">Healthcare Services</h5>
+                        <p class="text-muted mt-2">We bring you the highest quality services available on the market.</p>
+                        <a asp-area="" asp-controller="Home" asp-action="ServiceList" class="text-primary">Learn more <i class="ri-arrow-right-line align-middle"></i></a>
+                    </div>
+
+                    <div class="card border-0 p-4">
+                        <i class="ri-dossier-fill text-primary h2 mb-0"></i>
+                        <h5 class="mt-1">Online Booking</h5>
+                        <p class="text-muted mt-2">Our team of doctors is always ready to consult and examine just for you.</p>
+                        <br>
+                        <a asp-area="" asp-controller="Home" asp-action="DoctorList" class="text-primary">Learn more <i class="ri-arrow-right-line align-middle"></i></a>
+                    </div>
+
+                    <div class="card border-0 bg-light p-4">
+                        <i class="ri-time-fill text-primary h2 mb-0"></i>
+                        <h5 class="mt-1">Operating Hours</h5>
+                        <ul class="list-unstyled mt-2">
+                            <li class="d-flex justify-content-between">
+                                <p class="text-muted mb-0">Monday - Friday</p>
+                                <p class="text-primary mb-0">8.00 AM - 8.00 PM</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p class="text-muted mb-0">Saturday</p>
+                                <p class="text-primary mb-0">8.00 AM - 6.00 PM</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p class="text-muted mb-0">Sunday</p>
+                                <p class="text-primary mb-0">8.00 AM - 2.00 PM</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-100 mt-60">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="position-relative">
+                    <img src="assets/images/about/about.jpg" class="img-fluid" alt="">
+                    <div class="play-icon">
+                        <a href="https://youtu.be/QIvIN8M91x4" class="play-btn video-play-icon">
+                            <i class="mdi mdi-play text-primary rounded-circle bg-white title-bg- shadow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                <div class="ms-lg-4">
+                    <div class="section-title">
+                        <h4 class="title mb-4">Why Choose Doccare?</h4>
+                        <p class="text-muted para-desc">We bring together a team of experts, doctors, pharmacists, and nurses with high professional qualifications, excellent skills, dedication, and professionalism.</p>
+                        <p class="text-muted para-desc mb-0">Always putting the patient at the center, Doccare is committed to providing the best healthcare services to our customers.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-4">
+                <a asp-area="" asp-controller="Home" asp-action="DoctorList" class="btn btn-primary">More.. <i class="ri-arrow-right-line align-middle"></i></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="section home-tile-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 m-auto">
+                <div class="section-header text-center">
+                    <h2>What are you looking for?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-3">
+                        <div class="card text-center doctor-book-card">
+                            <img src="~/Content/theme/img/doctors/doctor-07.jpg" alt="" class="img-fluid">
+                            <div class="doctor-book-card-content tile-card-content-1">
+                                <div>
+                                    <h3 class="card-title mb-0">Visit a Doctor</h3>
+                                    <a asp-area="" asp-controller="Home" asp-action="DoctorList" class="btn book-btn1 px-3 py-2 mt-3" tabindex="0">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="card text-center doctor-book-card">
+                            <img src="~/Content/theme/img/img-pharmacy1.jpg" alt="" class="img-fluid">
+                            <div class="doctor-book-card-content tile-card-content-1">
+                                <div>
+                                    <h3 class="card-title mb-0">Find a Service</h3>
+                                    <a asp-area="" asp-controller="Home" asp-action="ServiceList" class="btn book-btn1 px-3 py-2 mt-3" tabindex="0">Find Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="card text-center doctor-book-card">
+                            <img src="~/Content/theme/img/lab-image.jpg" alt="" class="img-fluid">
+                            <div class="doctor-book-card-content tile-card-content-1">
+                                <div>
+                                    <h3 class="card-title mb-0">Send Contact</h3>
+                                    <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn book-btn1 px-3 py-2 mt-3" tabindex="0">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-specialities">
+    <div class="container-fluid">
+        <div class="section-header text-center">
+            <h2>Clinic and Specialities</h2>
+            <p class="sub-title">The Doccare team always brings you the most modern and top-quality healthcare services in the market, with specialized doctors in various fields.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="specialities-slider slider">
+                     @if (specialties != null && specialties.Any())
+
+                    {
+                        @foreach (var specialty in specialties)
+
+                        {
+                         <a asp-controller="Home" asp-action="ServiceDetail" asp-route-id="@specialty.SpecialtyId">    
+                    <div class="speicality-item text-center">
+                        <div class="speicality-img">
+                                    <img src="@specialty.SpecialtyImg" class="img-fluid" alt="Speciality @specialty.SpecialtyName">
+                            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                        </div>
+                                <p>@specialty.SpecialtyName</p>
+                    </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <p>No services available at the moment.</p>
+                    }            
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-doctor">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section-header ">
+                    <h2>Book Our Doctor</h2>
+                    <p>Doctor Services </p>
+                </div>
+                <div class="about-content">
+                    <p>Doccare gathers a team of experts, doctors, pharmacists, and nurses who are well-trained, </p>
+                    <p>from basic to advanced levels, both in Vietnam and in many countries with advanced medical fields such as the USA, UK, France...</p>
+                    <a asp-controller="Patient" asp-action="Invoice" asp-route-orderId="ord4600784">Read More..</a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="doctor-slider slider">
+                    @foreach (var doctor in doctors)
+
+                    {
+                        <div class="profile-widget" style="min-height: 600px;">
+                            <div class="doc-img" height ="228.4">
+                                <a asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@doctor.Did">
+                                    <img class="img-fluid" alt="User Image" src="@doctor.DoctorImg">
+                                </a>
+                                <a href="javascript:void(0)" class="fav-btn">
+                                    <i class="far fa-bookmark"></i>
+                                </a>
+                            </div>
+                            <div class="pro-content" style="min-height: 285px;">
+                                <h3 class="title">
+                                    <a asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@doctor.Did">@doctor.Name</a>
+                                    <i class="fas fa-check-circle verified"></i>
+                                </h3>
+                                <p class="speciality">@doctor.Phone</p>
+                                <div class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <span class="d-inline-block average-rating">(17)</span>
+                                </div>
+                                <ul class="available-info">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i> DaNang
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-dashboard"></i> @doctor.Dob
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="control">
+                                <div class="row row-sm">
+                                    <div class="col-6">
+                                        <a asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@doctor.Did" class="btn view-btn">View Profile</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://localhost:7248/Patient/BookingAppointment?doctorid=@doctor.Did" class="btn book-btn">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video-->
+<section class="section pt-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="video-solution-cta position-relative" style="z-index: 1;">
+                    <div class="position-relative">
+                        <img src="~/assets/images/bg/banner.jpg" class="img-fluid rounded-md shadow-lg" alt="">
+                        <div class="play-icon">
+                            <a href="https://youtu.be/cAdQFXWJD30" class="play-btn video-play-icon">
+                                <i class="mdi mdi-play text-primary rounded-circle bg-white title-bg- shadow-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-posts-placeholder bg-primary"></div>
+    </div>
+</section>
+
+
+
+@section Scripts
+
+{
+    <script src="~/Content/theme/js/slick.js"></script>
+    <script src="~/Content/theme/js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Cấu hình slider cho dịch vụ
+            $('.service-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: false,
+                infinite: true, // Thêm thuộc tính này
+                dots: false,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"></button>',
+                nextArrow: '<button type="button" class="slick-next"></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            // Cấu hình slider cho bác sĩ
+            $('.doctor-slider').slick({
+                slidesToShow: 4, // Thay đổi số lượng hiển thị nếu cần
+                slidesToScroll: 4,
+                autoplay: false,
+                dots: false,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev"></button>',
+                nextArrow: '<button type="button" class="slick-next"></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+
+    </script>
+} 

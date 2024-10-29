@@ -1,0 +1,52 @@
+﻿.doctor-dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .header1 .search-container {
+        display: flex;
+    }
+
+    .header1 input {
+        width: 200px;
+    }
+
+.doctor-table img {
+    border-radius: 50%;
+}
+
+.edit-btn {
+    background-color: #0D6EFD;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    position: relative;
+    right: 8px;
+}

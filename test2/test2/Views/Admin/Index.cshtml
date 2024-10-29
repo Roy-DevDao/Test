@@ -1,0 +1,267 @@
+﻿﻿ ﻿@{
+    Layout = "Layout_Admin";
+
+
+
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 12px;
+            padding: 5px;
+        }
+
+        .card-body i {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+
+        .col-md-8 {
+            width: 40%;
+            margin: 10px 10px;
+        }
+
+        .main {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .task1 {
+            width: 100%;
+        }
+
+        .task2 {
+            width: 80%;
+            height: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .task3 {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+        }
+
+
+
+        .chart-container {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .chart {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+}
+@section Scripts {
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Chart.js for the charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const genderCtx = document.getElementById('genderChart').getContext('2d');
+        const orderDates = @Html.Raw(Json.Serialize(ViewBag.OrderDates));
+        const orderCounts = @Html.Raw(Json.Serialize(ViewBag.OrderCounts)); // Contains the number of customers per day
+
+        const genderChart = new Chart(genderCtx, {
+            type: 'bar',
+            data: {
+                labels: orderDates, // Dates like 2024-09-25, 2024-09-26, etc.
+                datasets: [
+                    {
+                        label: 'Số lượng khách',
+                        data: orderCounts, // Should have values like [1, 5, 2, 3, ...] based on daily counts
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Số lượng khách'
+                        },
+                        ticks: {
+                            stepSize: 1, // Ensure steps of 1 for easier viewing of customer counts
+                            precision: 0,
+                            suggestedMax: Math.max(...orderCounts) + 5 // Automatically adjust the max to ensure all data is visible
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Ngày'
+                        }
+                    }
+                },
+            },
+        });
+    </script>
+
+    <script>
+        const departmentCtx = document.getElementById('departmentChart').getContext('2d');
+        const specialtyLabels = @Html.Raw(Json.Serialize(ViewBag.SpecialtyNames));
+        const doctorCounts = @Html.Raw(Json.Serialize(ViewBag.DoctorCounts));
+
+        const departmentChart = new Chart(departmentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: specialtyLabels,
+                datasets: [{
+                    data: doctorCounts,
+                    backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384', '#4BC0C0', '#9966FF'], // Add more colors if needed
+                }],
+            },
+            options: {
+                responsive: true,
+            },
+        });
+    </script>
+    <script>
+        // Pie Chart for Gender Distribution
+        const genderPieCtx = document.getElementById('genderPieChart').getContext('2d');
+        const genderPieChart = new Chart(genderPieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    data: [@ViewBag.MaleCount, @ViewBag.FemaleCount],
+                    backgroundColor: ['#36A2EB', '#FF6384']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+            }
+        });
+    </script>
+
+}
+
+@model IEnumerable<test2.Data.Feedback>
+
+<div class="main">
+    <div class="task1">
+        <!-- Stat Cards -->
+        <div class="row mb-4">
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-bed fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.TotalPatients</h5>
+                        <p class="card-text">Bệnh nhân</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-money-bill-wave fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.AvgCost.ToString("F1")</h5>
+                        <p class="card-text">Chi phí</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-users fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.TotalDoctors</h5>
+                        <p class="card-text">Bác sĩ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-comment fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.TotalFeedback</h5>
+                        <p class="card-text">Phản hồi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-alt fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.TotalAppointments</h5>
+                        <p class="card-text">Cuộc hẹn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-briefcase-medical fa-2x mb-2 text-primary"></i>
+                        <h5 class="card-title">@ViewBag.TotalService</h5>
+                        <p class="card-text">Dịch vụ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chart">
+        <div class="task2">
+            <div class="row">
+                <div class="col-md-8 chart-container bg-white p-4 shadow-sm rounded">
+                    <canvas id="genderChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+        <div class="task3">
+            <div class="row">
+                <div class="col-md-8 chart-container bg-white p-4 shadow-sm rounded">
+                    <canvas id="departmentChart"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 chart-container bg-white p-4 shadow-sm rounded">
+                    <canvas id="genderPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

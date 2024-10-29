@@ -1,0 +1,125 @@
+﻿@model test2.Models.Order.OrderInfoModel
+@{
+    Layout = "Layout_new";
+    ViewData["Title"] = "Hóa đơn thanh toán";
+}
+
+<style>
+    /* Đặt nền trang */
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Căn giữa hộp hóa đơn */
+    .invoice-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* Tạo khung hóa đơn */
+    .invoice-box {
+        width: 600px;
+        background-color: #ffffff;
+        padding: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative;
+    }
+
+        /* Định dạng tiêu đề hóa đơn */
+        .invoice-box h1 {
+            font-size: 28px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    /* Định dạng các nhóm form */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-weight: bold;
+            color: #555;
+        }
+
+    /* Định dạng các trường nhập liệu */
+    .form-control {
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    /* Nút thanh toán */
+    .btn-primary {
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Định dạng logo MoMo */
+    .momo-logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 80px;
+        height: auto;
+    }
+
+    /* Hiệu ứng khi di chuột vào nút thanh toán */
+    .btn-primary:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="invoice-container">
+    <div class="invoice-box">
+        <h1>Hóa Đơn Thanh Toán</h1>
+
+        <!-- Logo MoMo -->
+        <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square-1024x1024.png" alt="MoMo" class="momo-logo">
+
+        <form action="/Patient/CreatePaymentUrl" id="frmCreateOrder" method="POST">
+            <div class="form-group">
+                <label for="FullName">Tên khách hàng</label>
+                <input class="form-control" id="FullName" name="FullName" type="text" value="@Model.FullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Amount">Số tiền</label>
+                <input class="form-control" id="Amount" name="Amount" type="number" value="@Model.Amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="OrderInfo">Nội dung thanh toán</label>
+                <textarea class="form-control" cols="20" id="OrderInfo" name="OrderInfo" rows="2" required>@Model.OrderInfo</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="PaymentDate">Ngày trả</label>
+                <input class="form-control" id="PaymentDate" name="PaymentDate" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thanh toán (Checkout)</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Có thể thêm mã JavaScript nếu cần
+    });
+</script>

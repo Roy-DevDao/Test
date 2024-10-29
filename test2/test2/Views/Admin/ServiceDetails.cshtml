@@ -1,0 +1,285 @@
+﻿﻿﻿
+
+
+
+@{
+    Layout = "Layout_Admin";
+}
+
+@section Styles {
+    <style>
+        .layout-default_body_main {
+            width: 100%;
+        }
+
+        .whole-main {
+            border: 2px solid #F1F1F1;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+            .profile-header h3, .profile-header h2 {
+                font-weight: 600;
+            }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-status {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 20px;
+            color: #e05d3b;
+        }
+
+        .divider {
+            height: 60px;
+            width: 1px;
+            background-color: #ccc;
+            margin: 0 20px;
+        }
+
+        .profile-main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%
+        }
+
+        .box-left {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box-right {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .basic-info, .feedback, .intro {
+            border: 2px solid #F1F1F1;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .basic-info-header {
+            background-color: #0D6EFD;
+            padding: 15px 20px;
+            font-size: larger;
+            font-weight: 600;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            color: white;
+        }
+
+        .basic-info-main, .intro-main, .feedback-stats {
+            padding: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        /* Thiết lập thanh cuộn cho nội dung dài */
+        .content-scroll {
+            max-height: 100px;
+            overflow-y: auto;
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+}
+
+@model test2.Data.Specialty
+
+<main class="layout-default_body_main">
+    <div class="whole-main">
+        <div class="profile-header">
+            <div class="profile-info">
+                <h4>ID: @Model.SpecialtyId</h4>
+                <h4>Dịch vụ: @Model.SpecialtyName</h4>
+            </div>
+            <div class="divider"></div>
+            <div class="profile-status">
+                <p>Trạng thái:</p>
+                <p>Đang hoạt động</p>
+            </div>
+            <div class="divider"></div>
+            <div class="profile-status">
+                <p>
+                    Hình ảnh:<img src="@Model.SpecialtyImg" alt="Specialty Image" style="width:60px; height:60px;" />
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-main">
+            <div class="box-left">
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <h5>Thông tin cơ bản</h5>
+                    </div>
+                    <div class="basic-info-main">
+                        <div class="info-row">
+                            <div class="label">Giới thiệu:</div>
+                            <div class="value">@Model.ShortDescription</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="label">Giá:</div>
+                            <div class="value">@Model.Doctors.FirstOrDefault()?.Price 000VND</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="label">Thời gian:</div>
+                            <div class="value">1 giờ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <h5>Thông tin cơ bản</h5>
+                    </div>
+                    <div class="basic-info-main">
+                        <div class="info-row">
+                            <div class="label">Giới thiệu:</div>
+                            <div class="value">@Model.ShortDescription</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="label">Giá:</div>
+                            <div class="value">@Model.Doctors.FirstOrDefault()?.Price 000VND</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="label">Thời gian:</div>
+                            <div class="value">1 giờ</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="box-right">
+                    <div class="basic-info">
+                        <div class="basic-info-header">
+                            <h5>Thông tin chi tiết</h5>
+                        </div>
+                        <div class="basic-info-main">
+                            @foreach (var detail in Model.DetailSpecialties)
+
+
+
+                            {
+                                <div class="info-row">
+                                    <div class="label">Mã số:</div>
+                                    <div class="value">@detail.DetailId</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="label">Chủ đề:</div>
+                                    <div class="value">@detail.Title</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="label">Nội dung:</div>
+                                    <div class="value content-scroll">@detail.Content</div>
+                                </div>
+
+                                <hr /> <!-- Đường phân cách giữa các DetailSpecialty -->
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+
+@* <div class="feedback">
+                    <div class="basic-info-header">
+                        <h5>Phản hồi</h5>
+                    </div>
+                    <div class="feedback-stats">
+                        <h3>Đánh giá sao</h3>
+                        <ul>
+                            <li><span class="star-rating">★★★★★</span> 150 đánh giá</li>
+                            <li><span class="star-rating">★★★★</span> 50 đánh giá</li>
+                            <li><span class="star-rating">★★★</span> 20 đánh giá</li>
+                            <li><span class="star-rating">★★</span> 10 đánh giá</li>
+                            <li><span class="star-rating">★</span> 5 đánh giá</li>
+                        </ul>
+
+                        <h3>Ưu điểm</h3>
+                        <ul>
+                            <li>Khám xét kỹ lưỡng</li>
+                            <li>Nhân viên thân thiện</li>
+                            <li>Kết quả nhanh chóng</li>
+                        </ul>
+
+                        <h3>Nhược điểm</h3>
+                        <ul>
+                            <li>Chi phí cao hơn</li>
+                            <li>Khả năng tiếp cận hạn chế</li>
+                        </ul>
+                    </div>
+                    // xử lý chọn sao hiện ra phản hồi của từng sao
+                    @* <div class="feedback-section">
+                    <h5>Phản hồi của bác sĩ</h5>
+
+                    @if (Model.Doctors != null && Model.Doctors.Any())
+                    {
+                    foreach (var doctor in Model.Doctors)
+                    {
+                    <h6>Phản hồi cho @doctor.Name</h6>
+
+                    @if (doctor.Feedbacks != null && doctor.Feedbacks.Any())
+                    {
+                    <ul>
+                    @foreach (var feedback in doctor.Feedbacks)
+                    {
+                    <li>
+                    <strong>@feedback.Name</strong> - @feedback.Star sao
+                    <p>@feedback.Description</p>
+                    <small>Nhận xét vào: @(feedback.DateCmt.HasValue ? feedback.DateCmt.Value.ToString("yyyy-MM-dd") : "Không có ngày nào")</small>
+                    </li>
+                    }
+                    </ul>
+                    }
+                    else
+                    {
+                    <p>Không có phản hồi cho @doctor.Name.</p>
+                    }
+                    }
+                    }
+                    else
+                    {
+                    <p>Không có bác sĩ nào được phân công cho chuyên khoa này.</p>
+                    }
+                    </div>
+                </div> *@

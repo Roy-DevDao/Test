@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "_Layout";
+
+    ViewBag.Title = "Appointment History";
+
+
+
+    // Sample appointments data
+
+    var services = new List<dynamic> {
+        new { id = 1, name = "Khám tổng quát", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Upcoming" },
+        new { id = 2, name = "Nha khoa", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Finished" },
+        new { id = 3, name = "Sức khỏe tinh thần", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Finished" },
+        new { id = 3, name = "Sức khỏe tinh thần", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Finished" },
+        new { id = 3, name = "Sức khỏe tinh thần", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Finished" },
+        new { id = 3, name = "Sức khỏe tinh thần", dateBooking = "23/12/04", time = "10am",price="500.000", status = "Finished" }
+    };
+}
+
+<div class="container mx-auto mt-5 pt-10">
+    <h2 class="text-2xl font-bold text-blue-500 mb-4">Service History</h2>
+    <form class="flex items-center justify-center max-w-sm mx-auto mb-5">
+        <label for="simple-search" class="sr-only">Search</label>
+        <div class="relative w-full">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2" />
+                </svg>
+            </div>
+            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search name service" required />
+        </div>
+        <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+            </svg>
+            <span class="sr-only">Search</span>
+        </button>
+
+    </form>
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+            <thead>
+                <tr class="bg-blue-600 text-white text-left">
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">ID</th>
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">Name Service</th>
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">Date Booking</th>
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">Time</th>
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">Price</th>
+                    <th class="py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var service in services)
+
+                {
+                    <tr class="hover:bg-gray-100 transition duration-300 @(services.IndexOf(service) % 2 == 0 ? "bg-white" : "bg-gray-50")">
+                        <td class="py-3 px-4 border-b border-gray-300">@service.id</td>
+                        <td class="py-3 px-4 border-b border-gray-300">@service.name</td>
+                        <td class="py-3 px-4 border-b border-gray-300">@service.dateBooking</td>
+                        <td class="py-3 px-4 border-b border-gray-300">@service.time</td>
+                        <td class="py-3 px-4 border-b border-gray-300">@service.price</td>
+                        <td class="py-3 px-4 border-b border-gray-300"><span class="bg-blue-300 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">@service.status</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+﻿@model List<test2.Models.DoctorModel.BaseViewModel>
+
+@{
+    Layout = "~/Views/Shared/Layout_Doctor.cshtml";
+    var patientDetail = Model.FirstOrDefault()?.patientDetail;
+    var activeTab = ViewBag.ActiveTab?.ToString() ?? "profile";
+}
+
+<div class="mt-20 pt-6 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px ml-48 text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <li class="me-2">
+            <a href="@Url.Action("ViewPatientDetail", new { tab = "profile", pid = patientDetail?.Pid })"
+               class="inline-flex text-2xl items-center justify-center p-4 border-b-2 rounded-t-lg @(activeTab == "profile" ? "border-blue-600 text-blue-600" : "border-transparent hover:text-gray-600")">
+                Profile
+            </a>
+        </li>
+        <li class="me-2">
+            <a href="@Url.Action("ViewPatientDetail", new { tab = "appointment", pid = patientDetail?.Pid })"
+               class="inline-flex text-2xl items-center justify-center p-4 border-b-2 rounded-t-lg @(activeTab == "appointment" ? "border-blue-600 text-blue-600" : "border-transparent hover:text-gray-600")">
+                Appointment
+            </a>
+        </li>
+    </ul>
+
+    @if (activeTab == "profile")
+    {
+        <div class="container mx-auto p-4">
+            <div class="flex items-center mb-4">
+                <img class="w-24 h-24 rounded" src="https://i.pinimg.com/736x/52/c9/1c/52c91c32ae7ac4b75252fcb9a67d567b.jpg" alt="Default avatar">
+                <div class="ml-4">
+                    <h2 class="text-2xl font-bold text-gray-800">@patientDetail?.Name</h2>
+                    <p class="text-gray-600">"Your health, our priority."</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 shadow-md rounded-lg">
+                    <h3 class="font-semibold text-lg text-gray-700">Contact Information</h3>
+                    <p class="text-gray-600">Email: @patientDetail?.Email</p>
+                    <p class="text-gray-600">Phone: @patientDetail?.Phone</p>
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-lg">
+                    <h3 class="font-semibold text-lg text-gray-700">Date of Birth</h3>
+                    <p class="text-gray-600">@patientDetail?.Dob?.ToString("yyyy-MM-dd")</p>
+                </div>
+            </div>
+        </div>
+    }
+    else if (activeTab == "appointment")
+    {
+        <div class="container mx-auto p-4">
+            <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+                <thead>
+                    <tr class="bg-blue-600 text-white">
+                        <th class="py-3 px-4">Date</th>
+                        <th class="py-3 px-4">Time</th>
+                        <th class="py-3 px-4">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (patientDetail?.Appointments?.Count > 0)
+                    {
+                        foreach (var appointment in patientDetail.Appointments)
+                        {
+                            <tr>
+                                <td class="py-3 px-4">@appointment.Date</td>
+                                <td class="py-3 px-4">@appointment.Time</td>
+                                <td class="py-3 px-4">@appointment.Status</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center py-3">No appointments available.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

@@ -1,0 +1,223 @@
+﻿@model IEnumerable<DoctorViewModel>
+@{
+    ViewBag.Title = "Doctor List";
+
+    Layout = "~/Views/Shared/Layout_new.cshtml";
+
+    var total = ViewBag.TotalDoctors;
+
+    var query = ViewBag.Query; // Biến tìm kiếm
+    var specialtySelected = ViewBag.SpecialtySelected as List<string>; // Biến cho các chuyên khoa được chọn
+}
+
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Doctor List</li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title"> @total matches found: </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+                <div class="card search-filter">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Search Filter</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Home/DoctorList" method="post">
+                            <div class="filter-widget">
+                                <input type="text" class="form-control" placeholder="Nhập từ khóa" name="query" value="@query">
+                            </div>
+                            <h4>Gender</h4>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="genders" value="Male" @(ViewBag.Gender == "Male" ? "checked" : "")>
+                                    <span class="checkmark"></span> Nam
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="genders" value="Female" @(ViewBag.Gender == "Female" ? "checked" : "")>
+                                    <span class="checkmark"></span> Nữ
+                                </label>
+                            </div>
+                            <div class="filter-widget" style="height: 200px; overflow-y: scroll;">
+                                <h4>Select Faculties</h4>
+                                @foreach (var specialty in ViewBag.Specialties)
+
+                                {
+                                    <div>
+                                        <label class="custom_check">
+                                            <input type="checkbox" name="facultiesSelected" value="@specialty.SpecialtyId" @(specialtySelected.Contains(specialty.SpecialtyId) ? "checked" : "")>
+                                            <span class="checkmark"></span> @specialty.SpecialtyName
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                            <div class="btn-search">
+                                <button type="submit" class="btn btn-block">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-8 col-xl-9">
+                @foreach (var item in Model)
+
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="doctor-widget">
+                                <div class="doc-info-left">
+                                    <div class="doctor-img">
+                                        <a asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@item.DoctorId">
+                                            <img src="@item.DoctorImg" class="img-fluid" alt="User Image">
+                                        </a>
+                                    </div>
+                                    <div class="doc-info-cont">
+                                        <h4 class="doc-name"><a asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@item.DoctorId">@item.Name</a></h4>
+                                        <p class="doc-speciality"> @item.Position</p>
+                                        <h5 class="doc-department"> @item.Specialty</h5>
+                                        <div class="rating">
+                                            @for (int i = 0; i < 5; i++)
+
+                                            {
+                                                <i class="fas fa-star @(i < Math.Ceiling(item.Rating) ? "filled" : "")"></i>
+                                            }
+                                            <span class="d-inline-block average-rating">@item.NumberOfFeedbacks</span>
+                                        </div>
+                                        <div class="clinic-details">
+                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Da Nang</p>
+                                        </div>
+                                        <div class="clinic-services">
+                                            <span>Dental Fillings</span>
+                                            <span>Whitening</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="doc-info-right">
+                                    <div class="clini-infos">
+                                        <ul>
+                                            <li><i class="far fa-thumbs-up"></i> @(item.Rating * 20)%</li>
+                                            <li><i class="far fa-comment"></i> @item.NumberOfFeedbacks Feedback</li>
+                                            <li><i class="fas fa-map-marker-alt"></i> Da Nang</li>
+                                            <li>
+                                                <i class="fas fa-@(item.Gender == "Male" ? "mars" : "venus")"></i> @(item.Gender == "Male" ? "Male" : "Female")
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="clinic-booking">
+                                        <a class="view-pro-btn" asp-area="" asp-controller="Home" asp-action="DoctorDetail" asp-route-id="@item.DoctorId">View Profile</a>
+                                        <a class="apt-btn" href="https://localhost:7248/Patient/BookingAppointment?doctorid=@item.DoctorId">Book Appointment</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="row text-center" style="padding-bottom: 20px">
+                    <div class="col-12 mt-4">
+                        <div class="d-md-flex align-items-center text-center justify-content-between">
+                            <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+                                @if (ViewBag.PageNumber > 1)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" asp-action="DoctorList"
+                                           asp-route-gender="@ViewBag.Gender"
+                                           asp-route-speciality="@ViewBag.Speciality"
+                                           asp-route-sort="@ViewBag.Sort"
+                                           asp-route-pageNumber="@(ViewBag.PageNumber - 1)"
+                                           aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                }
+
+                                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                {
+                                    if (i <= 4 || i == ViewBag.TotalPages || (i == ViewBag.PageNumber - 1) || (i == ViewBag.PageNumber + 1))
+                                    {
+                                        <li class="page-item @(ViewBag.PageNumber == i ? "active" : "")">
+                                            <a class="page-link" asp-action="DoctorList"
+                                               asp-route-gender="@ViewBag.Gender"
+                                               asp-route-speciality="@ViewBag.Speciality"
+                                               asp-route-sort="@ViewBag.Sort"
+                                               asp-route-pageNumber="@i">
+                                                @i
+                                            </a>
+                                        </li>
+                                    }
+                                    else if (i == 5 && ViewBag.PageNumber > 5)
+                                    {
+                                        <li class="page-item disabled"><span class="page-link">...</span></li>
+                                    }
+
+
+
+                                }
+
+                                @if (ViewBag.PageNumber < ViewBag.TotalPages)
+
+
+
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" asp-action="DoctorList"
+                                           asp-route-gender="@ViewBag.Gender"
+                                           asp-route-speciality="@ViewBag.Speciality"
+                                           asp-route-sort="@ViewBag.Sort"
+                                           asp-route-pageNumber="@(ViewBag.PageNumber + 1)"
+                                           aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<style>
+    .current-page {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    .widget-title {
+        font-weight: bold;
+        color: #007bff;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .filter-label {
+        font-weight: bold;
+        color: #007bff;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+        display: inline-block;
+        background-color: #f7f7f7;
+        padding: 5px;
+        border-radius: 4px;
+    }
+</style>

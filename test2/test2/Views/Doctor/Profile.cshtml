@@ -1,0 +1,247 @@
+﻿@model List<test2.Models.DoctorModel.BaseViewModel>
+
+@{
+    var doctor = Model[0]; // Lấy đối tượng đầu tiên trong danh sách
+}
+
+@{
+    ViewBag.Title = "Sửa trang cá nhân bác sĩ";
+    Layout = "~/Views/Shared/Layout_Doctor.cshtml";
+}
+
+<style>
+    /* Reset các margin và padding */
+    /* Reset các margin và padding */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+    }
+
+.main-content {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    width: 83%;
+    max-height: 100px;
+}
+
+    .section-content {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 90px;
+        display: flex;
+        flex-direction: column;
+        width: 130%; /* Chiếm toàn bộ chiều rộng */
+        max-width: none; /* Bỏ max-width để chiếm toàn bộ chiều rộng */
+        margin: 0; /* Xóa margin tự động để không có khoảng trống */
+        height : 100px;
+    }
+
+
+    /* Các phần còn lại của CSS không thay đổi */
+    h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #343a40;
+    }
+
+    .icon-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        margin-right: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .form-control {
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+        transition: border-color 0.2s;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .btn {
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div class="main-content">
+    <section>
+        <div class="container">
+            <div class="section-content">
+
+                <!-- Thông báo lỗi nếu có -->
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger">
+                        <strong>Có lỗi xảy ra!</strong>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                }
+
+                <!-- Thông báo thành công -->
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        <strong>@TempData["SuccessMessage"]</strong>
+                    </div>
+                }
+
+                <div class="row">
+                    <!-- Phần thông tin bác sĩ -->
+                    <div class="col-md-12">
+                        <form asp-action="UpdateProfile" asp-controller="Doctor" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="[0].DId" value="@Model[0].DId" />
+                            
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_name">Tên</label>
+                                    <input name="[0].Name" class="form-control" type="text" value="@Model[0].Name">
+                                    @Html.ValidationMessageFor(m => m[0].Name, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label asp-for="@Model.First().doctorProfile.Gender">Giới tính</label>
+                                    <select asp-for="@Model.First().doctorProfile.Gender" class="form-control">
+                                        <option value="">---- Lựa chọn ----</option>
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                    </select>
+                                    @Html.ValidationMessageFor(m => m[0].doctorProfile.Gender, "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_username">Tên đăng nhập</label>
+                                    <input id="form_username" name="[0].doctorProfile.Username" class="form-control" type="text" disabled value="@Model[0].doctorProfile.Username">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Điện thoại</label>
+                                    <input name="[0].doctorProfile.Phone" class="form-control" type="text" value="@Model[0].doctorProfile.Phone" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_email">Email</label>
+                                    <input id="form_email" name="[0].doctorProfile.Email" class="form-control" type="email" disabled value="@Model[0].doctorProfile.Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form_date_of_birth">Ngày sinh</label>
+                                    <input id="form_date_of_birth" name="[0].doctorProfile.Dob" class="form-control" type="date" value="@Model[0].doctorProfile.Dob?.ToDateTime(new TimeOnly()).ToString("yyyy-MM-dd")">
+                                    @Html.ValidationMessageFor(m => m[0].doctorProfile.Dob, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="form_position">Chức vụ</label>
+                                    <input name="[0].doctorProfile.Position" class="form-control" type="text" value="@Model[0].doctorProfile.Position">
+                                    @Html.ValidationMessageFor(m => m[0].doctorProfile.Position, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="form_price">Giá khám</label>
+                                    <input name="[0].doctorProfile.Price" class="form-control" type="number" value="@Model[0].doctorProfile.Price">
+                                    @Html.ValidationMessageFor(m => m[0].doctorProfile.Price, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form_description">Mô tả</label>
+                                <textarea name="[0].doctorProfile.Description" class="form-control" rows="4">@Model[0].doctorProfile.Description</textarea>
+                                @Html.ValidationMessageFor(m => m[0].doctorProfile.Description, "", new { @class = "text-danger" })
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form_specialty">Chuyên khoa</label>
+                                <input name="[0].doctorProfile.Specialty" class="form-control" type="text" value="@Model[0].doctorProfile.Specialty" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="file">Ảnh đại diện</label>
+                                <input type="file" id="file" name="DoctorImageUpload" class="form-control">
+                                <p class="help-block">Upload ảnh đại diện bác sĩ.</p>
+                                @Html.ValidationMessage("DoctorImageUpload", "", new { @class = "text-danger" })
+                            </div>
+                            
+                            <div class="form-group">
+                                <button class="btn btn-success btn-lg btn-block mt-15" type="submit" id="btnUpdate">Cập nhật</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Phần đổi mật khẩu ở hàng thứ hai -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h4>Đổi mật khẩu</h4>
+                        <form asp-action="ChangePassword" asp-controller="Doctor" method="post">
+                            <div class="form-group">
+                                <label for="currentPassword">Mật khẩu hiện tại</label>
+                                <input type="password" id="currentPassword" name="currentPassword" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">Mật khẩu mới</label>
+                                <input type="password" id="newPassword" name="newPassword" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">Xác nhận mật khẩu mới</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/js/live/edit.account.js"></script>
+}

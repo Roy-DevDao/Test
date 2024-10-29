@@ -1,0 +1,262 @@
+﻿﻿
+@model IEnumerable<test2.Data.Doctor>
+@{
+    Layout = "Layout_staff";
+    ViewData["Title"] = "Schedule from Staff";
+    var schedules = ViewBag.Schedules as List<test2.Data.Option>; // Lấy danh sách lịch làm việc từ ViewBag
+    var selectedDoctor = ViewBag.SelectedDoctor as string; // Lấy bác sĩ đã chọn
+    var selectedDate = ViewBag.SelectedDate as DateTime? ?? DateTime.Now; // Lấy ngày đã chọn
+}
+
+<div class="container-fluid">
+    <div class="manage-schedule-container">
+        <div class="m-s-title">
+            <h3 class="mngSc">Manage Doctor's Schedule</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form asp-controller="Staff" asp-action="Schedule" method="get" class="d-flex flex-wrap">
+                    <div class="col-6 form-group">
+                        <label for="doctor-select">Choose Doctor</label>
+                        <select id="doctor-select" name="doctorId" class="form-select" onchange="this.form.submit()">
+                            <option value="">--Select Doctor--</option>
+                            @foreach (var doctor in Model)
+                            {
+                                <option value="@doctor.Did">@doctor.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="col-6 form-group">
+                        <label for="date-picker">Choose Date</label>
+                        <input type="date" id="date-picker" name="selectedDate" class="form-control" value="@selectedDate.ToString("yyyy-MM-dd")" onchange="this.form.submit()" />
+                    </div>
+                </form>
+
+                <div class="col-10 pick-hour-container d-flex justify-content-center">
+                    <table class="text-center">
+                        @for (DateTime date = selectedDate; date <= selectedDate.AddDays(6); date = date.AddDays(1))
+                        {
+                            <tr>
+                                <td>@date.DayOfWeek</td>
+
+                                @foreach (var time in new List<string> { "08:00", "09:00", "10:00", "14:00", "15:00", "16:00" })
+                                {
+                                    var option = schedules.FirstOrDefault(s => s.DateWork.HasValue &&
+                                    s.DateWork.Value.Date == date.Date &&
+                                    s.DateWork.Value.ToString("HH:mm") == time);
+
+                                    string buttonClass = "border-gray"; // Mặc định là viền xám
+                                    string buttonStyle = ""; // Mặc định không có kiểu viền
+
+                                    if (option != null)
+                                    {
+                                        if (option.Status == "Busy")
+                                        {
+                                            buttonClass = "border-danger"; // Viền đỏ cho Busy
+                                        }
+                                        else if (option.Status == "Confirm")
+                                        {
+                                            buttonClass = "border-success"; // Viền xanh lá cho Confirm
+                                        }
+                                        else if (option.Status == "Pending")
+                                        {
+                                            buttonClass = "border-primary"; // Viền xanh biển cho Pending
+                                        }
+                                    }
+
+                                    // Nếu không phải là viền xám, làm viền đậm
+                                    if (buttonClass != "border-gray")
+                                    {
+                                        buttonStyle = "border-width: 3px;"; // Viền đậm
+                                    }
+
+                                    <td>
+                                        <button class="btn btn-schedule mx-2 my-2 @buttonClass" style="@buttonStyle" data-date="@date.ToString("yyyy-MM-dd")" data-time="@time" onclick="toggleBusy(this)">@time</button>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </table>
+                </div>
+                <div class="col-2 note-hour-container">
+                    <table class="text-center">
+                        <tr>
+                            <td>
+                                <button class="btn btn-schedule mx-2 my-2 border-gray"></button>
+                            </td>
+                            <td>
+                                <p class="mx-2 my-2" style="text-align: left;">Empty</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-schedule mx-2 my-2 border-danger" style="border-width: 3px"></button>
+                            </td>
+                            <td>
+                                <p class="mx-2 my-2" style="text-align: left;">Busy</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-schedule mx-2 my-2 border-success" style="border-width: 3px"></button>
+                            </td>
+                            <td>
+                                <p class="mx-2 my-2" style="text-align: left;">Booked</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button class="btn btn-schedule mx-2 my-2 border-primary" style="border-width: 3px"></button>
+                            </td>
+                            <td>
+                                <p class="mx-2 my-2" style="text-align: left;">Pending</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary btn-save-schedule" onclick="saveSchedule()">Save Schedule</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .mngSc {
+        padding-bottom: 30px;
+    }
+
+    .manage-schedule-container {
+        text-transform: uppercase;
+        margin-top: 100px;
+        margin-bottom: 25px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 150px;
+        font-size: 18px;
+    }
+
+    .pick-hour-container {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .note-hour-container {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .btn-schedule {
+        padding: 5px 15px;
+        border: 1px solid gray;
+        padding-bottom: 20px;
+    }
+
+    .border-danger {
+        border-color: red;
+    }
+
+    .border-success {
+        border-color: green;
+    }
+
+    .border-primary {
+        border-color: blue;
+    }
+
+    .border-gray {
+        border-color: gray;
+    }
+
+    .btn-save-schedule {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+</style>
+
+
+<script>
+    // Xử lí chọn khung giờ
+    function toggleBusy(button) {
+        // Đánh dấu button đã được thay đổi
+        button.setAttribute('data-changed', 'true');
+
+        if (button.classList.contains('border-gray')) {
+            button.classList.remove('border-gray');
+            button.classList.add('border-danger');
+        } else if (button.classList.contains('border-danger')) {
+            button.classList.remove('border-danger');
+            button.classList.add('border-gray');
+        }
+        // Nếu là 'border-success' hoặc 'border-primary' thì không làm gì
+    }
+
+    function saveSchedule() {
+        // Tạo danh sách khung giờ đã chọn để cập nhật trạng thái 'Busy' hoặc 'Empty'
+        const selectedTimes = [];
+        const removedTimes = [];
+
+        // Lấy tất cả các button có attribute data-changed='true'
+        document.querySelectorAll('.btn-schedule[data-changed="true"]').forEach(button => {
+            const date = button.getAttribute('data-date');
+            const time = button.getAttribute('data-time');
+            const doctorId = '@selectedDoctor';
+
+            if (date && time && doctorId) {
+                // Kiểm tra trạng thái hiện tại để xác định hành động
+                if (button.classList.contains('border-danger')) {
+                    selectedTimes.push({ date, time, doctorId });
+                } else if (button.classList.contains('border-gray')) {
+                    removedTimes.push({ date, time, doctorId });
+                }
+            } else {
+                console.error('Invalid data found:', { date, time, doctorId });
+            }
+        });
+
+        // Test xem lịch truyền lên có bị null không
+        console.log("Selected times to update:", selectedTimes);
+        console.log("Selected times to remove:", removedTimes);
+
+        if (selectedTimes.length === 0 && removedTimes.length === 0) {
+            alert('No changes to update.');
+            return;
+        }
+
+        // Gửi dữ liệu lên server để cập nhật database
+        fetch('@Url.Action("UpdateSchedule", "Staff")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify([...selectedTimes, ...removedTimes])
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Schedule updated successfully');
+                } else {
+                    console.error('Server error:', data.message);
+                    alert('Failed to update schedule: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while updating the schedule');
+            });
+    }
+</script>
+</script>

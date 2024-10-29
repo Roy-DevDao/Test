@@ -1,0 +1,379 @@
+﻿﻿@using test2.Data
+@{
+	Layout = "Layout_Patient";
+	ViewBag.Title = "Appointment History";
+}
+@model IEnumerable<test2.Data.Order>
+
+
+<div class="container mx-auto p-4">
+	<div class="flex">
+		<h2 class="text-2xl text-blue-500 font-bold mb-4">Lịch Sử Đặt Lịch</h2>
+		<form class="flex items-center max-w-sm ml-24 my-4">
+			<button type="button" class="text-white px-4 py-2 flex items-center bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm  text-center me-2 mb-2">
+				<svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4H1m3 4H1m3 4H1m3 4H1m6.071.286a3.429 3.429 0 1 1 6.858 0M4 1h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Zm9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+				</svg>
+				<h1 id="sum" class="px-1 text-white">@Model.Count()</h1>
+				<h1 class="text-white"> total</h1>
+
+			</button>
+
+			<label for="simple-search" class="sr-only">Tìm Kiếm</label>
+			<div class="relative w-full">
+				<div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+					<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2" />
+					</svg>
+				</div>
+				<input type="text" id="searchapp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search name..." required />
+			</div>
+			<button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+				<svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+				</svg>
+				<span class="sr-only">Tìm</span>
+			</button>
+		</form>
+	</div>
+
+
+
+
+	<div class="relative border-1 border-gray-300 overflow-x-auto shadow-md sm:rounded-lg">
+		<table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+			<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+				<tr>
+					<th scope="col" class="px-6 py-3">
+						Tên Bác Sĩ
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Ảnh
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Chuyên Khoa
+					</th>
+
+					<th scope="col" class="px-6 py-3">
+						Ngày Đặt
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Trạng Thái
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Hành Động
+					</th>
+
+				</tr>
+			</thead>
+			<tbody id="searchdata">
+			</tbody>
+
+		</table>
+		<div class="flex flex-row-reverse items-center">
+			<nav class="flex items-center gap-x-1 my-2" aria-label="Pagination">
+				<button onclick="btnLeft()" type="button" class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" aria-label="Previous">
+					<svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="m15 18-6-6 6-6"></path>
+					</svg>
+					<span class="sr-only">Previous</span>
+				</button>
+				<div class="flex items-center gap-x-1">
+					<span id="currentpage" class="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-white dark:focus:bg-white/10">1</span>
+					<span class="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
+					<span id="totalpage" class="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">3</span>
+				</div>
+				<button onclick="btnRight()" type="button" class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" aria-label="Next">
+					<span class="sr-only">Next</span>
+					<svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="m9 18 6-6-6-6"></path>
+					</svg>
+				</button>
+			</nav>
+
+		</div>
+	</div>
+
+</div>
+<div class="w-52 max-w-xs bg-white border-1 border-gray-300 rounded-md p-4 absolute top-[192px]">
+	<!-- Filter by keywords -->
+	<div class="mb-4">
+		<button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg">
+			Filter by keywords
+
+		</button>
+	</div>
+
+	<!-- Filters section -->
+	<div>
+		<div class="flex justify-between mb-2 border-b-2 border-gray-200">
+
+			<div>
+				<button class="text-blue-500 hover:underline mr-2" onclick="saveView('',1)">Lưu</button>
+				<button class="text-blue-500 hover:underline" onclick="clearFilters()">Xoá</button>
+			</div>
+		</div>
+
+		<!-- Category filter (collapsed) -->
+		<div class="mb-4">
+			<button class="w-full flex justify-between items-center font-semibold text-gray-700 border-b-2 border-gray-200" onclick="toggleVisibility('categoryFilter')">
+				Category <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"></path>
+				</svg>
+			</button>
+			<div id="categoryFilter" class="mt-2 hidden border-b-2 border-gray-300">
+				@foreach (var specilty in ViewBag.Specialties)
+				{
+					<label class="flex items-center">
+						<input id="@specilty.SpecialtyId" type="checkbox" class="form-checkbox h-4 w-4 rounded-sm border-2 border-gray-300 text-blue-600 focus:ring-blue-500" />
+						<span class="ml-2">@specilty.SpecialtyName</span>
+					</label>
+				}
+			</div>
+		</div>
+
+		<!-- Date Booking filter -->
+		<div class="mb-4">
+			<button class="border-b-2 border-gray-200 w-full flex justify-between items-center font-semibold text-gray-700" onclick="toggleVisibility('priceFilter')">
+				Date Booking <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"></path>
+				</svg>
+			</button>
+			<div id="priceFilter" class="mt-2 pb-2 hidden border-b-2 border-gray-200">
+				<div class="flex space-x-2">
+					<input type="date" id="fromDate" class="w-20 border rounded-lg py-2 px-2 text-sm" placeholder="From" />
+					<input type="date" id="toDate" class="w-20 border rounded-lg py-2 px-2 text-sm" placeholder="To" />
+				</div>
+			</div>
+		</div>
+
+		<!-- Status filter -->
+		<div class="mb-4">
+			<button class="border-b-2 border-gray-200 w-full flex justify-between items-center font-semibold text-gray-700" onclick="toggleVisibility('shippingFilter')">
+				Status <svg class="w-3 h-3 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"></path>
+				</svg>
+			</button>
+			<div id="shippingFilter" class="mt-2 hidden border-b-2 border-gray-200">
+				<label class="flex justify-between items-center mb-2">
+					<input id="Pending" type="checkbox" class="toggle-checkbox hidden" id="toggle-na" />
+					<div class="toggle-path bg-gray-300 w-10 h-6 rounded-full relative">
+						<div class="toggle-circle absolute w-4 h-4 bg-white rounded-full left-1 top-1 transition-transform duration-300 ease-in-out"></div>
+					</div>
+					<span>Đã Thanh Toán</span>
+				</label>
+
+				<label class="flex justify-between items-center mb-2">
+					<input id="Complete" type="checkbox" class="toggle-checkbox hidden" id="toggle-na" />
+					<div class="toggle-path bg-gray-300 w-10 h-6 rounded-full relative">
+						<div class="toggle-circle absolute w-4 h-4 bg-white rounded-full left-1 top-1 transition-transform duration-300 ease-in-out"></div>
+					</div>
+					<span>Đã Xác Nhận</span>
+				</label>
+
+				<label class="flex justify-between items-center mb-2">
+					<input id="Cancel" type="checkbox" class="toggle-checkbox hidden" id="toggle-asia" />
+					<div class="toggle-path bg-gray-300 w-10 h-6 rounded-full relative">
+						<div class="toggle-circle absolute w-4 h-4 bg-white rounded-full left-1 top-1 transition-transform duration-300 ease-in-out"></div>
+					</div>
+					<span>Dã Huỷ</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script>
+		var sum = 0;
+		var count = 1;
+		function toggleVisibility(id) {
+			const element = document.getElementById(id);
+			if (element.classList.contains('hidden')) {
+				element.classList.remove('hidden');
+			} else {
+				element.classList.add('hidden');
+			}
+		}
+
+		document.querySelectorAll('.toggle-checkbox').forEach((checkbox) => {
+			checkbox.addEventListener('change', (e) => {
+				const togglePath = e.target.nextElementSibling;
+				const toggleCircle = togglePath.querySelector('.toggle-circle');
+
+				if (e.target.checked) {
+					togglePath.classList.remove('bg-gray-300');
+					togglePath.classList.add('bg-blue-500');
+					toggleCircle.classList.add('translate-x-4');
+					toggleCircle.style.left = '5px';
+				} else {
+					togglePath.classList.remove('bg-blue-500');
+					togglePath.classList.add('bg-gray-300');
+					toggleCircle.classList.remove('translate-x-4');
+					toggleCircle.style.left = '1px';
+				}
+			});
+		});
+
+		function search(input, pending, complete, cancel, listFilter, start, end, page) {
+			console.log(listFilter);
+			$.ajax({
+				url: '/Patient/GetAppointmentByQuery',  // URL of the action method in the server
+				type: 'GET',
+				data: { query: input, pending: pending, complete: complete, cancel: cancel, listFilter: listFilter, start: start, end: end, page: page },
+				traditional: true,  // Make sure array is serialized correctly it's so important to set true
+				success: function ({ data, total }) {
+					var searchbody = document.getElementById('searchdata');
+					searchbody.innerHTML = "";
+					console.log("data : ", data, "  -- ", total);
+					if (total == -1) {
+						count = 0;
+						document.getElementById('totalpage').innerHTML = 0;
+						document.getElementById('sum').innerHTML = 0;
+						document.getElementById('currentpage').innerHTML = 0;
+						return;
+
+					}
+					if (total && total > 0) {
+						sum = total;
+						document.getElementById('totalpage').innerHTML = Math.ceil(sum / 5);
+						document.getElementById('sum').innerHTML = sum;
+						count = 1;
+						document.getElementById('currentpage').innerHTML = count;
+
+					}
+				data.sort((a, b) => new Date(b.date) - new Date(a.date));
+					for (let i = 0; i < data.length; i++) {
+					const dateObj = new Date(data[i].date);
+					const formattedDate = dateObj.toLocaleDateString('vi-VN');  // Định dạng ngày theo chuẩn Việt Nam
+					const formattedTime = dateObj.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+					let displayStatus = '';
+					switch (data[i].status) {
+						case 'Paid':
+							displayStatus = 'Đã Thanh toán';
+							break;
+						case 'Canceled':
+							displayStatus = 'Đã Hủy';
+							break;
+						case 'Confirm':
+							displayStatus = 'Đã Xác nhận';
+							break;
+						default:
+							displayStatus = data[i].status; // Giữ nguyên nếu không có giá trị khớp
+					}
+						var row = `
+																	<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+																		<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+																			${data[i].name}
+																		</th>
+																		<td class="px-6 py-4">
+																			<img class="w-20 h-20 rounded" src="${data[i].image}" alt="Default avatar">
+																		</td>
+																		<td class="px-6 py-4">
+																				${data[i].specialty}
+																		</td>
+																		<td class="px-6 py-4">
+																					 ${formattedDate} ${formattedTime}
+																		</td>
+																		<td class="px-6 py-4">
+																				<span class="text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded
+						${data[i].status == "Paid" ? "bg-yellow-300 dark:bg-yellow-900 dark:text-yellow-300" :
+							(data[i].status == "Canceled" ? "bg-red-300 dark:bg-red-900 dark:text-red-300" : "bg-blue-300 dark:bg-blue-900 dark:text-blue-300")}">
+						${displayStatus} <!-- Hiển thị status bằng tiếng Việt -->
+					</span>
+																		</td>
+																		<td class="px-6 py-4">
+																			 <a href="/Patient/AppointmentDetail?oid=${data[i].id}"  class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View Detail</a>
+																		</td>
+
+																	</tr>
+																	`
+						searchbody.insertAdjacentHTML('beforeend', row);
+					}
+
+					console.log("this is app world : ", data);
+				},
+				error: function (error) {
+					console.log('Error:', error); // Error handling
+				}
+			});
+		}
+
+		$(document).ready(function () {
+			$('#searchapp').on('input', function () {
+				var input = $(this).val();
+				saveView(input, 1);
+
+			});
+		});
+
+
+
+	function saveView(input, page) {
+		if (input.length == 0) {
+			document.getElementById('searchapp').value = '';
+		}
+		var pending = document.getElementById("Pending").checked;
+		var complete = document.getElementById("Complete").checked;
+		var cancel = document.getElementById("Cancel").checked;
+		var start = document.getElementById('fromDate').value;
+		var end = document.getElementById('toDate').value;
+		const listFilter = [];
+
+		document.querySelectorAll('.form-checkbox').forEach(checkbox => {
+			if (checkbox.checked == true) {
+				listFilter.push(checkbox.id);
+
+			};
+		});
+		search(input, pending, complete, cancel, listFilter, start, end, page);
+	}
+
+
+	function clearFilters() {
+		// Clear the date range filters
+		document.getElementById('fromDate').value = '';
+		document.getElementById('toDate').value = '';
+
+		// Clear all checkboxes (Category and Status filters)
+		document.querySelectorAll('.form-checkbox').forEach(checkbox => {
+			checkbox.checked = false;
+		});
+
+		document.querySelectorAll('.toggle-checkbox').forEach((checkbox) => {
+			if (checkbox.checked == true) {
+				checkbox.click();
+			}
+
+
+		});
+	}
+
+	function btnRight() {
+		console.log(count, " - ", sum);
+		if (Math.ceil(sum / 5) <= count) {
+			return;
+		}
+		count++;
+		console.log(count);
+		var context = document.getElementById('searchapp').value
+
+		saveView(context, count)
+		document.getElementById('currentpage').innerHTML = count;
+
+
+
+	}
+
+	function btnLeft() {
+		if (count <= 1) {
+			return;
+		}
+		count--;
+		var context = document.getElementById('searchapp').value
+		saveView(context, count);
+		document.getElementById('currentpage').innerHTML = count;
+
+	}
+
+	saveView('', 1);
+</script>

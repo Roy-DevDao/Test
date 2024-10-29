@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thành công";
+    Layout = "Layout_new"; // Đảm bảo sử dụng layout của bạn
+}
+
+<div class="container">
+    <div class="alert alert-success text-center">
+        <h1><i class="fas fa-check-circle fa-5x"></i></h1>
+        <h2>Thanh toán thành công!</h2>
+        <p>@TempData["Message"]</p>
+        <a href="@Url.Action("AppointmentHistory", "Patient")" class="btn btn-primary">Xem lịch hẹn</a>
+    </div>
+</div>
+
+<style>
+    .alert {
+        margin-top: 100px;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .fa-check-circle {
+        color: green;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+</style>
